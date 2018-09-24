@@ -1,0 +1,586 @@
+body{
+background-color:white;
+}
+
+
+
+th.degraD {
+padding-top:20px;
+font-size:17px;
+text-align:center ;
+
+text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: grey;
+ background-color: #FAFAFA; background-image: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#CCCCCC));
+ background-image: -webkit-linear-gradient(top, #FAFAFA, #CCCCCC);
+ background-image: -moz-linear-gradient(top, #FAFAFA, #CCCCCC);
+ background-image: -ms-linear-gradient(top, #FAFAFA, #CCCCCC);
+ background-image: -o-linear-gradient(top, #FAFAFA, #CCCCCC);
+ background-image: linear-gradient(to bottom, #FAFAFA, #CCCCCC);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FAFAFA, endColorstr=#CCCCCC);
+
+}
+
+#LarTH{
+width:300px;
+}
+
+div.divAuto{
+margin-left: 100px;
+text-align: left;
+}
+#zoneP{
+min-height:600px;
+height:600px;/*pour IE qui comprend rien, et qui ne reconnait pas min-height, mais qui comprend mal height*/
+
+overflow:auto;/*pour activer les scrollbarres*/
+}
+#divPrev{
+min-height:600px;
+height:600px;/*pour IE qui comprend rien, et qui ne reconnait pas min-height, mais qui comprend mal height*/
+
+}
+#headerTAB{
+ z-index: 9999;
+ position: fixed;
+ 
+ /* Mise en forme */
+ width: 900px; /* <-- Largeur de votre site */
+ }
+.OKB {
+ width: 30px;
+    height: 30px;
+border-radius: 10px;
+background-color:white; 
+border-color:#336699;
+font-size: 12px;
+color:#336699;
+
+ cursor:pointer;
+ transition-duration: 0.4s;
+}
+.OKB:hover {
+
+background-color:#336699; 
+border-color:white;
+font-size: 12px;
+color:white;
+ cursor:pointer;
+ 
+}
+.OKB:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/*input sans bordure */
+input.inputBorder{
+  border: 0px;
+  background-color:transparent;
+  height:22px;
+  }
+  
+  .inputBorder:hover {
+
+font-weight: bold;
+
+ cursor:pointer;
+ 
+}
+ /******/
+  div.divNote{
+  
+  cursor:pointer;
+
+	opacity: 0.7;
+}
+#Xnote{
+float:right;
+
+  background:#F7819F;
+border-color:#F7819F;
+  padding-top: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  box-shadow: 5px 5px 2px #F7819F;
+  border-style: inset;
+  
+}
+
+
+
+
+.divNote:hover{
+ 
+  cursor:pointer;
+
+	opacity: 0.9;
+}
+
+#divL{
+min-height:400px;
+height:400px;/*pour IE qui comprend rien, et qui ne reconnait pas min-height, mais qui comprend mal height*/
+width:500px;
+
+position:absolute;
+
+
+}
+#divR{
+min-height:400px;
+height:400px;/*pour IE qui comprend rien, et qui ne reconnait pas min-height, mais qui comprend mal height*/
+width:500px;
+
+margin-left:535px;
+
+
+
+}
+.divAP1{
+min-height:400px;
+height:400px;/*pour IE qui comprend rien, et qui ne reconnait pas min-height, mais qui comprend mal height*/
+width:520px;
+overflow-y: scroll;
+position:absolute;
+
+
+}
+.divAP2{
+min-height:400px;
+height:400px;/*pour IE qui comprend rien, et qui ne reconnait pas min-height, mais qui comprend mal height*/
+width:700px;
+
+margin-left:521px;
+overflow-y : scroll;
+
+
+}
+.divHP1{
+position:fixed;
+
+
+}
+hr{
+box-shadow: 5px 5px 2px #888888;
+}
+th.thP{
+width:200px;
+}
+div.divAuto2{
+margin-left: 2px;
+text-align: left;
+}
+.divAuto ul li:hover {
+	background: #eaeaea;
+	cursor:pointer;
+}
+.divAuto2 ul li:hover {
+	background: #eaeaea;
+	cursor:pointer;
+}
+#div1{
+min-height:550px;
+height:550px;/*pour IE qui comprend rien, et qui ne reconnait pas min-height, mais qui comprend mal height*/
+
+overflow:auto;/*pour activer les scrollbarres*/
+}
+#divP2{
+
+min-height:550px;
+height:550px;/*pour IE qui comprend rien, et qui ne reconnait pas min-height, mais qui comprend mal height*/
+
+overflow-y:scroll;/*pour activer les scrollbarres*/
+overflow-x:hidden;/*pour activer les scrollbarres*/
+}
+#divP1{
+overflow-y:scroll;/*pour activer les scrollbarres*/
+overflow-x:hidden;
+
+}
+#div2{
+min-height:400px;
+height:400px;/*pour IE qui comprend rien, et qui ne reconnait pas min-height, mais qui comprend mal height*/
+
+overflow:auto;/*pour activer les scrollbarres*/
+}
+.divAuto ul {
+	width: 150px;
+	border: 1px solid #eaeaea;
+	position: absolute;
+	z-index: 9;
+	background: #f3f3f3;
+	list-style: none;
+}
+.divAuto2 ul {
+	width: 150px;
+	border: 1px solid #eaeaea;
+	position: absolute;
+	z-index: 9;
+	background: #f3f3f3;
+	list-style: none;
+}
+h2{
+font-size: 40px; 
+color: #F0F8FF; 
+text-align: center;
+}
+h3{
+font-size: 20px; 
+color:#6E6E6E; 
+text-align: left;
+margin-left:10px;
+}
+/*
+input[type="checkbox"] {
+    content:"";
+    display:inline-block;
+    width:50px;
+    height:20px;
+    background:#444;
+    border-radius:12px;
+}
+input[type="checkbox"]:checked {
+   width:50px;
+    height:25px;
+	
+}
+*/
+#globalq {
+  margin-left: auto;
+  margin-right: auto;
+  width:30%; 
+}
+
+#global {
+  margin-left: auto;
+  margin-right: auto;
+  width:60%; 
+}
+#globalk {
+  margin-left: auto;
+  margin-right: auto;
+  width:25%; 
+}
+
+#globals {
+  margin-left: auto;
+  margin-right: auto;
+  width:40%; 
+}
+
+
+#globaln{
+  margin-left: auto;
+  margin-right: auto;
+  width:50%; 
+}
+#globala{
+  margin-left: auto;
+  margin-right: auto;
+  width:35%; 
+}
+
+
+#globalb{
+  margin-left: auto;
+  margin-right: auto;
+  width:26%; 
+}
+
+#globalc{
+  margin-left: auto;
+  margin-right: auto;
+  width:35%; 
+}
+
+
+
+div.ex
+{
+width:148px;
+height:17px;
+padding:2px;
+border: 1px solid #969690;
+
+margin:1px;
+background-color:white;
+}
+p.two
+{
+font-weight: bold;
+font-family: 'calibri';
+font-size: 28px;
+margin-left: auto;
+margin-right: auto;
+border-style:solid;
+border-color:#339966;
+text-align: center;
+background-color:black;
+color:white;
+width:400px;
+height:40px;
+box-shadow: 1px 1px 12px #555;
+
+border-radius: 0px 20px 0 20px;
+}
+
+p.there
+{
+font-weight: bold;
+font-family: 'calibri';
+font-size: 20px;
+margin-left: auto;
+margin-right: auto;
+border-style:solid;
+border-color:#046380;
+text-align: center;
+background-color:#046380;
+color:white;
+width:300px;
+height:30px;
+box-shadow: 1px 1px 12px #555;
+border-radius: 20px 20px 20px 20px;
+}
+
+
+
+
+#entete,#logo, #boton{
+padding:0 0 ;
+
+}
+#main{
+margin:auto;
+position:relative;
+max-width:100%;
+
+
+}
+#menu{
+width:205px;
+position:absolute;
+background: #336699;
+min-height:2000px;
+}
+#contenu{
+margin-left:205px;
+min-height:150px;
+padding-left: 20px;
+height:100%;
+border-radius: 10px;	
+
+}
+
+#entete {
+max-width:100%;
+padding-right:0px;
+
+
+}
+#flotP{
+float:right;
+width:200px;
+height:100px;
+margin-right:0px;
+padding-right:0px;
+}
+#logo {
+float:left;
+width:200px;
+height:100px;
+background-image:url("../image/logo.jpg");
+border-radius: 10px;
+}
+
+#boton {
+margin-left:200px;
+margin-right:0px;
+height: 100px;
+border-radius: 10px;
+background-image:url("../image/boton.jpg");
+}
+
+
+
+#cssmenua {
+  position: relative;
+  margin: 0;
+  font-family: 'Roboto Condensed';
+  line-height: 1;
+  width: 200px;
+}
+.align-right {
+  float: right;
+}
+#cssmenua ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+#cssmenua ul li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#cssmenua ul li a {
+  text-decoration: none;
+  cursor: pointer;
+}
+#cssmenua > ul > li > a {
+  color: #dddddd;
+  text-transform: uppercase;
+  display: block;
+  padding: 20px;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  background: #336699;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 300;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -ms-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  position: relative;
+}
+#cssmenua > ul > li:first-child > a {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+#cssmenua > ul > li:last-child > a {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom: 1px solid #000000;
+}
+#cssmenua > ul > li:hover > a,
+#cssmenua > ul > li.open > a,
+#cssmenua > ul > li.active > a {
+  background: #151515;
+  color: #ffffff;
+}
+#cssmenua ul > li.has-sub > a::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 13px solid #000000;
+  border-botom: 13px solid transparent;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  left: 0;
+  bottom: -13px;
+  bottom: 0px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+#cssmenua ul > li.has-sub > a::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 13px solid #151515;
+  border-botom: 13px solid transparent;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  left: 0;
+  bottom: -12px;
+  bottom: -1px;
+  z-index: 3;
+  opacity: 0;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+#cssmenua ul > li.has-sub::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-top-color: #dddddd;
+  z-index: 2;
+  right: 20px;
+  top: 24.5px;
+  pointer-events: none;
+}
+#cssmenua ul > li:hover::after,
+#cssmenua ul > li.active::after,
+#cssmenua ul > li.open::after {
+  border-top-color: #ffffff;
+}
+#cssmenua ul > li.has-sub.open > a::after {
+  opacity: 1;
+  bottom: -13px;
+}
+#cssmenua ul > li.has-sub.open > a::before {
+  opacity: 1;
+  bottom: -12px;
+}
+#cssmenua ul ul {
+  display: none;
+}
+#cssmenua ul ul li {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+#cssmenua ul ul li a {
+  background: #f1f1f1;
+  display: block;
+  position: relative;
+  font-size: 15px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #dddddd;
+  color: #777777;
+  font-weight: 300;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -ms-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+#cssmenua ul ul li:first-child > a {
+  padding-top: 18px;
+}
+#cssmenua ul ul ul li {
+  border: 0;
+}
+#cssmenua ul ul li:hover > a,
+#cssmenua ul ul li.open > a,
+#cssmenua ul ul li.active > a {
+  background: #e4e4e4;
+  color: #666666;
+}
+#cssmenua ul ul > li.has-sub > a::after {
+  border-top: 13px solid #dddddd;
+}
+#cssmenua ul ul > li.has-sub > a::before {
+  border-top: 13px solid #e4e4e4;
+}
+#cssmenua ul ul ul li a {
+  padding-left: 30px;
+}
+#cssmenua ul ul > li.has-sub::after {
+  top: 18.5px;
+  border-width: 6px;
+  border-top-color: #777777;
+}
+#cssmenua ul ul > li:hover::after,
+#cssmenua ul ul > li.active::after,
+#cssmenua ul ul > li.open::after {
+  border-top-color: #666666;
+}
