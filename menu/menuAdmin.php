@@ -3,49 +3,50 @@
 <ul>
    	<li class='last'><a href='home.php'><center><span>Admin </span><div id="Xnote"></div></center></a></li>
 <!--Commercial -->
-    <li class='has-sub'><a href='#'><span>Commerciale</span></a>
+    <li class='has-sub'><a href='#'><span>Commercial</span></a>
     <ul>
-        <li class='has-sub'><a href='#'><span>Gérer Commande</span></a>
+        <li class='has-sub'><a href='#'><span>Manage Orders</span></a>
             <ul>
-			 <li><a href='ajout_commande.php'><span>Ajout commande</span></a></li>
-			 <li><a href='ajout_commande_auto.php'><span>Auto-création commande</span></a></li>
-			 <li><a href='consult_commande.php'><span>Consulter commandes</span></a></li>              
-			 <li><a href='update_commande.php'><span>Modification commande</span></a></li>
-             <li><a href='delete_commande.php'><span>Suppression commande</span></a></li>         
+			 <li><a href='ajout_commande.php'><span>Manage Orders</span></a></li>
+			 <li><a href='ajout_commande_auto.php'><span>Order Auto-creation</span></a></li>
+			 <li><a href='consult_commande.php'><span>Consult Order</span></a></li>
+			 <li><a href='update_commande.php'><span>Edit Order</span></a></li>
+             <li><a href='delete_commande.php'><span>Delete Order</span></a></li>
             </ul>
         </li>
-        <li class='has-sub'><a href='#'><span> Gérer Les Achats </span></a>
+        <li class='has-sub'><a href='#'><span> Manage Purchases</span></a>
             <ul>
-               <li><a href='ajout_ordre_achat2.php'><span> Ajout Bon d'achat </span></a></li>
-			   <li><a href='consult_ordre_achat.php'><span> Consulter Bon d'achat </span></a></li>
-			   <li><a href='update_ordre_achat.php'><span>Modifier Bon d'achat</span></a></li>
-			   <li><a href='print_oa.php'><span> Impression  Ordre </span></a></li>
-               <li><a href='delete_ordre_achat.php'><span> Suppression Ordre  </span></a></li>
-               <li class='has-sub'><a href='#'><span> Demande de prix </span></a>
+               <li><a href='ajout_ordre_achat2.php'><span> Add Purchase Order </span></a></li>
+			   <li><a href='consult_ordre_achat.php'><span> Consult Purchase Order </span></a></li>
+			   <li><a href='update_ordre_achat.php'><span> Edit Purchase Order </span></a></li>
+			   <li><a href='print_oa.php'><span> Print Order </span></a></li>
+               <li><a href='delete_ordre_achat.php'><span> Delete Order </span></a></li>
+
+               <li class='has-sub'><a href='#'><span> Prices Request </span></a>
 		            <ul>
-		               <li class='last'><a href='demande_prix_article.php'><span> Demande des prix  </span></a></li>
-		               <li class='last'><a href='consult_demande_prix_.php'><span> Consult Demande  </span></a></li>
+		               <li class='last'><a href='demande_prix_article.php'><span> Price Request  </span></a></li>
+		               <li class='last'><a href='consult_demande_prix_.php'><span> Consult Price-Request </span></a></li>
 		            </ul>
          		</li>
-                <li class='last'><a href='prevision_stock.php'><span> Prévision du stock  </span></a></li>
+                <li class='last'><a href='prevision_stock.php'><span> Stock Forecast </span></a></li>
             </ul>
         </li>
 		 
-		<li class='has-sub'><a href='#'><span>Gérer Client</span></a>
+		<li class='has-sub'><a href='#'><span> Manage Customers </span></a>
             <ul>
-			 <li><a href='consult_client.php'><span>Consult client</span></a></li>
-             <li><a href='ajout_client.php'><span>Ajout client</span></a></li>
-			 <li><a href='#'><span>Modification client</span></a></li>         
+			 <li><a href='consult_client.php'><span>Consult Customers </span></a></li>
+             <li><a href='ajout_client.php'><span> Add Customers </span></a></li>
+			 <li><a href='#'><span> Edit Customers </span></a></li>
             </ul>
         </li>
-		<li class='has-sub'><a href='#'><span>Gérer Fournisseur </span></a>
+		<li class='has-sub'><a href='#'><span> Manage Supplier </span></a>
             <ul>
-			 <li><a href='consult_fournisseur.php'><span>Consult Fournissuer</span></a></li>
-               <li><a href='ajout_fournisseur.php'><span>Ajout Fournissuer</span></a></li>
-			   <li><a href='#'><span>Modification Fournissuer</span></a></li>
+			 <li><a href='consult_fournisseur.php'><span> Consult Supplier </span></a></li>
+               <li><a href='ajout_fournisseur.php'><span> Add Supplier </span></a></li>
+			   <li><a href='#'><span> Edit Supplier </span></a></li>
    		   </ul>
         </li>
-		<li><a href='ajout_prix_produit2.php'><span> Modification prix produit </span></a></li>
+		<li><a href='ajout_prix_produit2.php'><span> Edit Product Prices </span></a></li>
 		<li><a href='rapport_po.php'><span> PO report </span></a></li>
 		<li><a href='batch_tracking.php'><span> Batch tracking </span></a></li>
 		<li><a href='tyco_account.php'><span> TYCO account </span></a></li>
@@ -53,67 +54,68 @@
     </ul>
     </li>
 <!--Logistique -->
-  	<li class='has-sub'><a href='#'><span>Logistique</span></a>
+  	<li class='has-sub'><a href='#'><span> Logistic </span></a>
     <ul>         
-       	<li><a href='ajout_ordre_fabrication.php'><span>Ajout OF</span></a></li>
-	   	<li><a href='consult_OF.php'><span>Consult OF</span></a></li>
-	   	<li><a href='update_ordre_fabrication.php'><span>Modification OF</span></a></li>
-       	<li class='last'><a href='delete_ordre_fabrication.php'><span>Suppression OF</span></a></li>
-	  	<li class='last'><a href='print_planing.php'><span>Impression planning</span></a></li>
-	   	<li><a href='print_of.php'><span>Impression OF</span></a></li>
-      	<li class='last'><a href='consult_commandeItems.php'><span>Consult commande</span></a></li>
-       	<li class='last'><a href='consult_qty_prod.php'><span>Quantité produite</span></a></li>
-	  	<li  class='has-sub'><a href='#'><span>Graphes</span></a>
+       	<li><a href='ajout_ordre_fabrication.php'><span> Add OF </span></a></li>
+	   	<li><a href='consult_OF.php'><span> Consult OF </span></a></li>
+	   	<li><a href='update_ordre_fabrication.php'><span> Edit OF </span></a></li>
+       	<li class='last'><a href='delete_ordre_fabrication.php'><span> Delete OF </span></a></li>
+	  	<li class='last'><a href='print_planing.php'><span> Print schedule </span></a></li>
+	   	<li><a href='print_of.php'><span> Print OF</span></a></li>
+      	<li class='last'><a href='consult_commandeItems.php'><span>Consult Order </span></a></li>
+       	<li class='last'><a href='consult_qty_prod.php'><span> Producted Quantity</span></a></li>
+
+	  	<li  class='has-sub'><a href='#'><span>Graphs</span></a>
 	   	<ul>
-	       <li><a href='graphe_production.php'><span>Graphe production</span></a></li>
-	       <li><a href='consult_defaut.php'><span>Défauts journalier</span></a></li>
-		   <li><a href='consult_defautEX.php'><span>Défauts par expédition</span></a></li>
-		   <li><a href='graphe_defaut.php'><span>Graphe défauts</span></a></li>
-		   <li><a href='graphe_ppm.php'><span>PPM </span></a></li>
+	       <li><a href='graphe_production.php'><span>Production Graph </span></a></li>
+	       <li><a href='consult_defaut.php'><span>Daily Defects</span></a></li>
+		   <li><a href='consult_defautEX.php'><span>Defects By Shipment</span></a></li>
+		   <li><a href='graphe_defaut.php'><span>Defects Graph</span></a></li>
+		   <li><a href='graphe_ppm.php'><span>PPM Graph</span></a></li>
 	    </ul>
 	    </li>
 	    <li><a href='failure_analysis.php'><span> Failure analysis </span></a></li>
 	</ul>
 	</li>
 <!--Expédition -->
-	<li class='has-sub'><a href='#'><span>Expédition</span></a>
+	<li class='has-sub'><a href='#'><span>Shipment</span></a>
 	<ul>
-	 	<li class='has-sub'><a href='#'><span>Gestion palette</span></a>
+	 	<li class='has-sub'><a href='#'><span>Palette Management</span></a>
 	    <ul>
 	       <li><a href='label_paquet.php'><span>Tickets</span></a></li>
 		   <li><a href='gestion_palette.php'><span>Palette</span></a></li>
-		   <li><a href='gestion_carton.php'><span>Gestion cartons</span></a></li>
+		   <li><a href='gestion_carton.php'><span> Boxes Management</span></a></li>
 		   <li><a href='consult_ship_rep.php'><span> Shipment report </span></a></li>
 		</ul>
 		</li>	
-		<li class='has-sub'><a href='#'><span>Expédition Commande</span></a>
+		<li class='has-sub'><a href='#'><span>Shipment Orders</span></a>
        	<ul>
-		   	<li><a href='ajout_expedition.php'><span>Expédition</span></a></li>
-	 		<li class='last'><a href='consult_expedition.php'><span>Liste expédition</span></a></li>
+		   	<li><a href='ajout_expedition.php'><span>Add Shipment</span></a></li>
+	 		<li class='last'><a href='consult_expedition.php'><span>Shipment List</span></a></li>
       	</ul>
  		</li>		 
- 		<li class='has-sub'><a href='#'><span>Bon de livraison</span></a>
+ 		<li class='has-sub'><a href='#'><span>Delivery Form</span></a>
        	<ul>
-	       <li><a href='ajout_BL.php'><span>création BL</span></a></li>
-	       <li><a href='ajout_BL_auto.php'><span>Auto_création BL</span></a></li>
+	       <li><a href='ajout_BL.php'><span>Create BL</span></a></li>
+	       <li><a href='ajout_BL_auto.php'><span>Auto-creation BL</span></a></li>
 		   <li><a href='consult_BL.php'><span>Consult BL</span></a></li>
-		   <li><a href='#'><span>Suppression BL</span></a></li>
-		   <li class='last'><a href='print_bl.php'><span>Impression BL</span></a></li>
+		   <li><a href='#'><span>Delete BL</span></a></li>
+		   <li class='last'><a href='print_bl.php'><span>Print BL</span></a></li>
        	</ul>
  		</li>		 
-		<li class='has-sub'><a href='#'><span>Facture</span></a>
+		<li class='has-sub'><a href='#'><span>Invoices</span></a>
 	       <ul>
-		       <li><a href='ajout_fact.php'><span>création Facture</span></a></li>
-			   <li><a href='consult_facture.php'><span>Consult Facture</span></a></li>
-			   <li><a href='#.php'><span>Suppression Facture</span></a></li>
-			   <li class='last'><a href='print_facture.php'><span>Impression Facture</span></a></li>
+		       <li><a href='ajout_fact.php'><span>Create Invoice</span></a></li>
+			   <li><a href='consult_facture.php'><span>Consult Invoice</span></a></li>
+			   <li><a href='#.php'><span>Delete Invoice</span></a></li>
+			   <li class='last'><a href='print_facture.php'><span>Print Invoice</span></a></li>
 	       </ul>
 	 	</li>
 	 	<li class='has-sub'><a href='#'><span>Credit note</span></a>
 	    <ul>               
-	       <li><a href='credit_note_starz.php'><span>Credit note</span></a></li>
-	       <li><a href='consult_credit_note.php'><span>Consult Credit note</span></a></li>			   		 
-		   <li class='last'><a href='print_credit_note.php'><span>Impression credit note</span></a></li>
+	       <li><a href='credit_note_starz.php'><span>Credit Note</span></a></li>
+	       <li><a href='consult_credit_note.php'><span>Consult Credit Note</span></a></li>
+		   <li class='last'><a href='print_credit_note.php'><span>Print Credit Note</span></a></li>
 	    </ul>
 	 	</li>
 </ul>
@@ -122,24 +124,24 @@
 <!--Production -->
   	<li class='has-sub'><a href='#'><span>Production</span></a>
     <ul>
-        <li class='has-sub'><a href='#'><span>Suivi Production</span></a>
+        <li class='has-sub'><a href='#'><span>Production Monitoring</span></a>
         <ul>
-			<li class='has-sub'><a href='#'><span>Production Cable</span></a>
+			<li class='has-sub'><a href='#'><span>Cable Production </span></a>
             <ul>
-               <li><a href='decoupage.php'><span>Découpage</span></a></li>
-			   <li><a href='assemblage.php'><span>Assemblage</span></a></li>
-			   <li><a href='sertissage.php'><span>Sertissage</span></a></li>
-			   <li><a href='test_pol.php'><span>Test Polarité</span></a></li>
-			   <li><a href='controle_fluke.php'><span>Controle FLUKE</span></a></li>
-			   <li><a href='emballage.php'><span>Emballage</span></a></li>
-               <li class='last'><a href='emballage_carton.php'><span>Emballage Carton</span></a></li>
-			   <li><a href='carton_po.php'><span>Consult Carton</span></a></li>
-			   <li><a href='emballage_final.php'><span>Emballage final</span></a></li>
+               <li><a href='decoupage.php'><span> Cutting </span></a></li>
+			   <li><a href='assemblage.php'><span>Assembly</span></a></li>
+			   <li><a href='sertissage.php'><span>Crimping</span></a></li>
+			   <li><a href='test_pol.php'><span> Polarity Test </span></a></li>
+			   <li><a href='controle_fluke.php'><span> FLUKE Control</span></a></li>
+			   <li><a href='emballage.php'><span> Packaging </span></a></li>
+               <li class='last'><a href='emballage_carton.php'><span> Box Packaging </span></a></li>
+			   <li><a href='carton_po.php'><span>Box Consult </span></a></li>
+			   <li><a href='emballage_final.php'><span>Final Packaging</span></a></li>
             </ul>
 			</li>
-			<li class='has-sub'><a href='#'><span>Production UPM 3</span></a>
+			<li class='has-sub'><a href='#'><span>UPM 3 Production </span></a>
             <ul>
-               <li><a href='upm_plug_ins_deb.php'><span>Plug insertion</span></a></li>
+               <li><a href='upm_plug_ins_deb.php'><span>Plug Insertion</span></a></li>
 			   <li><a href='upm_ws_insertion_deb.php'><span>Wire seal Insertion</span></a></li>
 			   <li><a href='upm_test_deb.php'><span>TEST</span></a></li>
 			   <li><a href='upm_stripping_deb.php'><span>Stripping</span></a></li>
@@ -151,67 +153,67 @@
         	</li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Gerer production</span></a>
+		<li class='has-sub'><a href='#'><span>Manage Production</span></a>
         <ul>
-           <li><a href='#'><span>Ajout chaine</span></a></li>
-		   <li><a href='#'><span>Consult chaine</span></a></li>			   
-		   <li class='last'><a href='#'><span>suppression chaine</span></a></li>
+           <li><a href='#'><span>Add Line</span></a></li>
+		   <li><a href='#'><span>Consult Line</span></a></li>
+		   <li class='last'><a href='#'><span>Delete Line</span></a></li>
         </ul>
         </li>
 		<li class='has-sub'><a href='#'><span>Relance</span></a>
 		<ul>
 		 	<li><a href='bande_relance.php'><span>Demande relance</span></a></li>
 		 	<li><a href='consult_bande_relance.php'><span>Consulter relance</span></a></li>
-		  	<li><a href='relance_confirmation1.php'><span>Confirmation qualité </span></a></li>
-		  	<li><a href='relance_confirmation2.php'><span>Confirmation direction </span></a></li>
+		  	<li><a href='relance_confirmation1.php'><span>Quality Confirmation </span></a></li>
+		  	<li><a href='relance_confirmation2.php'><span>Direction Confirmation  </span></a></li>
 		</ul>
 		</li>
 	</ul>
 	</li> 
 <!--Magazin -->
 
-	<li class='has-sub'><a href='#'><span>Gestion de Stock </span></a>  
+	<li class='has-sub'><a href='#'><span>Stock Management</span></a>
 	<ul>
-		<li class='has-sub'><a href='#'><span>Réception </span></a>
+		<li class='has-sub'><a href='#'><span>Reception </span></a>
 		<ul>
-			<li><a href='ajout_reception.php'><span>Réception stock</span></a></li>
-			<li><a href='ajout_stock.php'><span>Entrée stock </span></a></li>			  
-			<li><a href='consult_reception.php'><span>Liste des receptions</span></a></li>			   
-			<li><a href='consult_reception_items.php'><span>Liste des receptions2</span></a></li>		  
-			<li><a href='print_reception.php'><span>Print reception</span></a></li>			   
-			<li class='last'><a href='consult_ordre_achat_MAG.php'><span> Liste des ordre d'achat </span></a></li>	       
+			<li><a href='ajout_reception.php'><span>Stock Reception</span></a></li>
+			<li><a href='ajout_stock.php'><span>Stock Entry</span></a></li>
+			<li><a href='consult_reception.php'><span>Receptions Liste</span></a></li>
+			<li><a href='consult_reception_items.php'><span>Reception Items List</span></a></li>
+			<li><a href='print_reception.php'><span>Print Reception</span></a></li>
+			<li class='last'><a href='consult_ordre_achat_MAG.php'><span> Purchase Orders List </span></a></li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Sortie </span></a>
+		<li class='has-sub'><a href='#'><span>Out Of Stock </span></a>
 		<ul>
-			<li><a href='sortie_stock3.php'><span>Sortie stock </span></a></li>			
-			<li><a href='sortie_stock2.php'><span>Sortie stock 2 </span></a></li>		  		
-			<li><a href='consult_sortie.php'><span>Liste des sorties</span></a></li>                      
-			<li><a href='update_stock_article.php'><span>Update stock</span></a></li                             
+			<li><a href='sortie_stock3.php'><span>Out Of Stock </span></a></li>
+			<li><a href='sortie_stock2.php'><span>Out Of Stock  2 </span></a></li>
+			<li><a href='consult_sortie.php'><span>Out Of Stock List </span></a></li>
+			<li><a href='update_stock_article.php'><span>Update Stock</span></a></li
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Consommable </span></a>
+		<li class='has-sub'><a href='#'><span>Consummables </span></a>
 		<ul>
-			<li><a href='ajout_demande.php'><span>Demande  </span></a></li>
-			<li><a href='sortie_consommable.php'><span>Sortie  </span></a></li>
+			<li><a href='ajout_demande.php'><span>Request </span></a></li>
+			<li><a href='sortie_consommable.php'><span>Output  </span></a></li>
 			<li><a href='confirmation_recep_cons.php'><span>Confirmation  </span></a></li>
-			<li><a href='consult_demande_cons.php'><span>Liste des demandes</span></a></li>		           
+			<li><a href='consult_demande_cons.php'><span>Requests List</span></a></li>
 		</ul>
 		</li>
 		<li class='has-sub'><a href='#'><span> Consultation </span></a>
 		<ul>
-			<li><a href='consult_stock.php'><span> Consultation Stock </span></a></li>
-			<li><a href='consult_paquet.php'><span>Paquet</span></a></li>			   
-			<li><a href='print_barcode.php'><span> Print code paquet </span></a></li>	             
+			<li><a href='consult_stock.php'><span>Stock Consult </span></a></li>
+			<li><a href='consult_paquet.php'><span>Consult Package</span></a></li>
+			<li><a href='print_barcode.php'><span> Print Package Code </span></a></li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Bon de retour </span></a>
+		<li class='has-sub'><a href='#'><span> Right of Return </span></a>
 		<ul>
-			<li><a href='bande_retour.php'><span>Bon de retour</span></a></li>   
-			<li><a href='consult_bande_retour.php'><span>Liste des bons</span></a></li>   
+			<li><a href='bande_retour.php'><span>Right of Return </span></a></li>
+			<li><a href='consult_bande_retour.php'><span>Right of Return List</span></a></li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Bon de relance </span></a>
+		<li class='has-sub'><a href='#'><span>Re </span></a>
 		<ul>
 			<li><a href='bande_relance.php'><span>Bon de relance</span></a></li>   
 			<li><a href='consult_bande_relance.php'><span>Liste des bons</span></a></li>   
