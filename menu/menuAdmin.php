@@ -7,7 +7,7 @@
     <ul>
         <li class='has-sub'><a href='#'><span>Manage Orders</span></a>
             <ul>
-			 <li><a href='ajout_commande.php'><span>Manage Orders</span></a></li>
+			 <li><a href='ajout_commande.php'><span>Add Order</span></a></li>
 			 <li><a href='ajout_commande_auto.php'><span>Order Auto-creation</span></a></li>
 			 <li><a href='consult_commande.php'><span>Consult Order</span></a></li>
 			 <li><a href='update_commande.php'><span>Edit Order</span></a></li>
@@ -16,7 +16,7 @@
         </li>
         <li class='has-sub'><a href='#'><span> Manage Purchases</span></a>
             <ul>
-               <li><a href='ajout_ordre_achat2.php'><span> Add Purchase Order </span></a></li>
+               <li><a href='ajout_ordre_achat.php'><span> Add Purchase Order </span></a></li>
 			   <li><a href='consult_ordre_achat.php'><span> Consult Purchase Order </span></a></li>
 			   <li><a href='update_ordre_achat.php'><span> Edit Purchase Order </span></a></li>
 			   <li><a href='print_oa.php'><span> Print Order </span></a></li>
@@ -63,7 +63,7 @@
 	  	<li class='last'><a href='print_planing.php'><span> Print schedule </span></a></li>
 	   	<li><a href='print_of.php'><span> Print OF</span></a></li>
       	<li class='last'><a href='consult_commandeItems.php'><span>Consult Order </span></a></li>
-       	<li class='last'><a href='consult_qty_prod.php'><span> Producted Quantity</span></a></li>
+       	<li class='last'><a href='consult_qty_prod.php'><span> Produced Quantity</span></a></li>
 
 	  	<li  class='has-sub'><a href='#'><span>Graphs</span></a>
 	   	<ul>
@@ -160,6 +160,7 @@
 		   <li class='last'><a href='#'><span>Delete Line</span></a></li>
         </ul>
         </li>
+<!--        Not translated-->
 		<li class='has-sub'><a href='#'><span>Relance</span></a>
 		<ul>
 		 	<li><a href='bande_relance.php'><span>Demande relance</span></a></li>
@@ -207,13 +208,13 @@
 			<li><a href='print_barcode.php'><span> Print Package Code </span></a></li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span> Right of Return </span></a>
+		<li class='has-sub'><a href='#'><span> Return Note</span></a>
 		<ul>
-			<li><a href='bande_retour.php'><span>Right of Return </span></a></li>
-			<li><a href='consult_bande_retour.php'><span>Right of Return List</span></a></li>
+			<li><a href='bande_retour.php'><span>New Return Note</span></a></li>
+			<li><a href='consult_bande_retour.php'><span>Return Note List</span></a></li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Re </span></a>
+		<li class='has-sub'><a href='#'><span>Relance </span></a>
 		<ul>
 			<li><a href='bande_relance.php'><span>Bon de relance</span></a></li>   
 			<li><a href='consult_bande_relance.php'><span>Liste des bons</span></a></li>   
@@ -222,61 +223,61 @@
 	</ul>
 	</li>
 <!--GRH -->
-	<li class='has-sub'><a href='#'><span>GRH</span></a>	
+	<li class='has-sub'><a href='#'><span>HRM</span></a>
 	<ul>
-		<li  class='has-sub'><a href='#'><span>Personnel</span></a>
+		<li  class='has-sub'><a href='#'><span>Employee</span></a>
 		<ul>
-			<li><a href='ajout_personnel.php'><span>AJOUT Personnel</span></a></li>
-			<li><a href='consult_personnel.php'><span>Consulter Personnel</span></a></li>
+			<li><a href='ajout_personnel.php'><span>Add Employee</span></a></li>
+			<li><a href='consult_personnel.php'><span>Consult Employee</span></a></li>
 		</ul>
 		</li>
-		<li  class='has-sub'><a href='#'><span>Pointage</span></a>
+		<li  class='has-sub'><a href='#'><span>Clocking</span></a>
 		<ul>
-			<li><a href='pointage.php'><span>Ajout pointage</span></a></li>
-			<li><a href='ajout_doubleP.php'><span>Double pointage</span></a></li>
-			<li><a href='consult_pointage.php'><span>Liste des pointages</span></a></li>
-			<li><a href='update_pointage.php'><span>Modification des pointages</span></a></li>
-			<li><a href='pointage_manuel.php'><span>Pointage manuel</span></a></li>
+			<li><a href='pointage.php'><span>Add Clocking</span></a></li>
+			<li><a href='ajout_doubleP.php'><span>Double Clocking</span></a></li>
+			<li><a href='consult_pointage.php'><span>Clocking List</span></a></li>
+			<li><a href='update_pointage.php'><span>Edit Clocking</span></a></li>
+			<li><a href='pointage_manuel.php'><span>Manual Clocking</span></a></li>
 		</ul>
 		</li>
-		<li  class='has-sub'><a href='#'><span>Avance</span></a>
+		<li  class='has-sub'><a href='#'><span>Pay Advance</span></a>
 		<ul>
-			<li><a href='ajout_avance.php'><span>Ajout Avance</span></a></li>
-			<li><a href='consult_avance.php'><span>Liste des avances</span></a></li>
+			<li><a href='ajout_avance.php'><span>Add Advance</span></a></li>
+			<li><a href='consult_avance.php'><span>Advances List</span></a></li>
 		</ul>
 		</li> 
-		<li  class='has-sub'><a href='#'><span>Congé</span></a>
+		<li  class='has-sub'><a href='#'><span>Holidays/Leaves</span></a>
 		<ul>
-			<li><a href='consult_demande_conge.php'><span>Liste des demandes </span></a></li>
-			<li><a href='ajout_conge.php'><span>Ajout congé</span></a></li>
-			<li><a href='consult_conge.php'><span>Liste des congés</span></a></li>
+			<li><a href='consult_demande_conge.php'><span>Leaves request List </span></a></li>
+			<li><a href='ajout_conge.php'><span>Add Leave</span></a></li>
+			<li><a href='consult_conge.php'><span>Leaves List</span></a></li>
 		</ul>
 		</li> 
-		<li  class='has-sub'><a href='#'><span>Mise à pied</span></a>
+		<li  class='has-sub'><a href='#'><span>Suspension</span></a>
 		<ul>
-			<li><a href='ajout_mise.php'><span>Ajout mise à pied</span></a></li>
-			<li><a href='consult_mise.php'><span>Liste des mises à pied</span></a></li>
+			<li><a href='ajout_mise.php'><span>Add Suspension</span></a></li>
+			<li><a href='consult_mise.php'><span>Suspensions List</span></a></li>
 		</ul>
 		</li> 
 		<li  class='has-sub'><a href='#'><span>Absence</span></a>
 		<ul>
-			<li><a href='ajout_absence.php'><span>Ajout absence</span></a></li>
-			<li><a href='consult_absence.php'><span>Liste des absences</span></a></li>
+			<li><a href='ajout_absence.php'><span>Add absence</span></a></li>
+			<li><a href='consult_absence.php'><span>Absences List</span></a></li>
 		</ul>
 		</li> 
-		<li  class='has-sub'><a href='#'><span>Salaire</span></a>
+		<li  class='has-sub'><a href='#'><span>Salary</span></a>
 		<ul>
-			<li><a href='calcul_salaire.php'><span>Calcul des salaires</span></a></li>
-			<li><a href='consult_salaire.php'><span>Liste des salaires</span></a></li>
-			<li><a href='consult_etat.php'><span>Etat salaire personnel</span></a></li>
-			<li><a href='calcul_pay_sup.php'><span>Payment supplémentaire</span></a></li>
+			<li><a href='calcul_salaire.php'><span>Salary Calculation</span></a></li>
+			<li><a href='consult_salaire.php'><span>Salary List</span></a></li>
+			<li><a href='consult_etat.php'><span>Salary State</span></a></li>
+			<li><a href='calcul_pay_sup.php'><span>Additional Payment</span></a></li>
 		</ul>
 		</li>
-		<li  class='has-sub'><a href='#'><span>Contrat</span></a>
+		<li  class='has-sub'><a href='#'><span>Contract</span></a>
 		<ul>
-			<li><a href='ajout_contrat.php'><span>Ajout contrat</span></a></li>
-			<li><a href='consult_contrat.php'><span>Liste des contrat</span></a></li>
-			<li><a href='rompre_contrat.php'><span>Rompre un contrat</span></a></li>
+			<li><a href='ajout_contrat.php'><span>Add contract</span></a></li>
+			<li><a href='consult_contrat.php'><span>Contract List</span></a></li>
+			<li><a href='rompre_contrat.php'><span>Break Contract</span></a></li>
 		</ul>
 		</li>
 		<li  class='has-sub'><a href='#'><span>Training</span></a>
@@ -287,13 +288,13 @@
 		</li>
 		<li  class='has-sub'><a href='#'><span>Permission</span></a>
 		<ul>
-			<li><a href='ajout_permission.php'><span>Ajout permission</span></a></li>
-			<li><a href='consult_permission.php'><span>Consult permission</span></a></li>
-			<li><a href='heure_allaitement.php'><span>Heure Allaitement</span></a></li>
+			<li><a href='ajout_permission.php'><span>Add Permission</span></a></li>
+			<li><a href='consult_permission.php'><span>Consult Permission</span></a></li>
+			<li><a href='heure_allaitement.php'><span>Breastfeeding Time</span></a></li>
 		</ul>
 		</li>
 		<li><a href='consult_retard.php'><span>Retard</span></a></li>
-		<li><a href='public_holidays.php'><span>Jour ferié</span></a></li>
+		<li><a href='public_holidays.php'><span>Public Holiday</span></a></li>
 	</ul>
 	</li>
 <!--Management -->
@@ -309,26 +310,26 @@
 <!--Maintenance -->
 	<li class='has-sub'><a href='#'><span>Maintenance</span></a>
 	<ul>
-		<li class='has-sub'><a href='#'><span>Gestion des machines</span></a>
+		<li class='has-sub'><a href='#'><span>Machines Management</span></a>
 		<ul>
-			<li><a href='#'><span>Ajout machine</span></a></li>
-			<li><a href='#'><span>Consulter machine</span></a></li>
-			<li class='last'><a href='#'><span>Suppression machine</span></a></li>
+			<li><a href='#'><span>Add Machine</span></a></li>
+			<li><a href='#'><span>Consult Machine</span></a></li>
+			<li class='last'><a href='#'><span>Delete Machine</span></a></li>
 		</ul>
 		</li>
 		<li class='has-sub'><a href='#'><span>Preventive</span></a>
 		<ul>
-			<li><a href='ajout_materiel.php'><span>Material</span></a></li>
-			<li><a href='ajout_preventive.php'><span>Add preventive</span></a></li>
-			<li><a href='consult_preventive.php'><span>Consult preventive</span></a></li>
+			<li><a href='ajout_materiel.php'><span>Add Material</span></a></li>
+			<li><a href='ajout_preventive.php'><span>Add Preventive</span></a></li>
+			<li><a href='consult_preventive.php'><span>Consult Preventive</span></a></li>
 		</ul>
 		</li>
 		<li class='has-sub'><a href='#'><span>Calibration</span></a>
 		<ul>
-			<li><a href='ajout_materiel.php'><span>Material</span></a></li>
+			<li><a href='ajout_materiel.php'><span>Add Material</span></a></li>
 			<li><a href='ajout_calibrage.php'><span>Add Calibration</span></a></li>
-			<li><a href='consult_materiel.php'><span>Material list</span></a></li>
-			<li><a href='consult_calibration.php'><span>Calibration list</span></a></li>
+			<li><a href='consult_materiel.php'><span>Material List</span></a></li>
+			<li><a href='consult_calibration.php'><span>Calibration List</span></a></li>
 		</ul>
 		</li>
 	</ul>
@@ -336,93 +337,93 @@
 <!--Fabrication -->
 	<li class='has-sub'><a href='#'><span>Fabrication</span></a>
 	<ul>
-		<li class='has-sub'><a href='#'><span>Produit</span></a>
+		<li class='has-sub'><a href='#'><span>Product</span></a>
 		<ul>
-			<li><a href='ajout_produit.php'><span>Ajout produit</span></a></li>
-			<li><a href='ajout_produit_auto.php'><span>Ajout via excel</span></a></li>
-			<li><a href='update_poids_produit.php'><span>Update poids produit</span></a></li>
-			<li><a href='#'><span>Modification produit</span></a></li>
-			<li><a href='dupliquer_produit.php'><span>Dupliquer produit</span></a></li>
-			<li><a href='confirmer_produit.php'><span>Confirmer produit</span></a></li>
-			<li class='last'><a href='consult_produit.php'><span>Consultation produit</span></a></li>
+			<li><a href='ajout_produit.php'><span>Add Product</span></a></li>
+			<li><a href='ajout_produit_auto.php'><span>Add via excel</span></a></li>
+			<li><a href='update_poids_produit.php'><span>Update Product Weight</span></a></li>
+			<li><a href='#'><span>Edit Product</span></a></li>
+			<li><a href='dupliquer_produit.php'><span>Duplicate Product</span></a></li>
+			<li><a href='confirmer_produit.php'><span>Confirm Product</span></a></li>
+			<li class='last'><a href='consult_produit.php'><span>Consult Product</span></a></li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Article</span></a>
+		<li class='has-sub'><a href='#'><span>Goods</span></a>
 		<ul>
-			<li><a href='ajout_article.php'><span>Ajout article</span></a></li>			 
-			<li><a href='ajout_article_auto.php'><span>Auto-création articles</span></a></li>			 
-			<li class='last'><a href='consult_article.php'><span>consultion article</span></a></li>
+			<li><a href='ajout_article.php'><span>Add Goods</span></a></li>
+			<li><a href='ajout_article_auto.php'><span>Goods Auto-Creation </span></a></li>
+			<li class='last'><a href='consult_article.php'><span>Consult Goods</span></a></li>
 		</ul>
 		</li>
-		<li><a href='consult_cable_carton.php'><span>Quantité cable par carton</span></a></li>
+		<li><a href='consult_cable_carton.php'><span>Quantity Cable Per Box</span></a></li>
 	</ul>
 	</li>
 <!--Finance-->
 	<li class='has-sub'><a href='#'><span>Finance</span></a>
 	<ul>
-		<li class='has-sub'><a href='#'><span>Compte bancaire</span></a>
+		<li class='has-sub'><a href='#'><span>Bank Account</span></a>
 		<ul>
-			<li><a href='ajout_compte.php'><span>Ajout compte</span></a></li>
-			<li><a href='consult_compte.php'><span>Liste des comptes</span></a></li>			
-			<li><a href='ajout_transaction.php'><span>Ajout transaction</span></a></li>			
-			<li><a href='consult_transaction_compte.php'><span>Consult transaction</span></a></li>			
-			<li><a href='verification_transactionC.php'><span>Verification transaction</span></a></li>		
+			<li><a href='ajout_compte.php'><span>Add Account</span></a></li>
+			<li><a href='consult_compte.php'><span>Accounts List</span></a></li>
+			<li><a href='ajout_transaction.php'><span>Add Transaction</span></a></li>
+			<li><a href='consult_transaction_compte.php'><span>Consult Transaction</span></a></li>
+			<li><a href='verification_transactionC.php'><span>Transaction Verification </span></a></li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Facture fournisseur</span></a>	
+		<li class='has-sub'><a href='#'><span>Invoices</span></a>
 		<ul>			
-			<li ><a href='supplier_invoice.php'><span>Recreate supplier invoice</span></a></li>
-			<li ><a href='invoice_payment.php'><span>Payment facture</span></a></li>
-			<li ><a href='unbilled_expense.php'><span>Add Unbilled expense</span></a></li>
-			<li ><a href='consult_invoice2.php'><span>Consult facture</span></a></li>
+			<li ><a href='supplier_invoice.php'><span>Recreate Supplier Invoice</span></a></li>
+			<li ><a href='invoice_payment.php'><span>Invoice Payment</span></a></li>
+			<li ><a href='unbilled_expense.php'><span>Add Unbilled Expense</span></a></li>
+			<li ><a href='consult_invoice2.php'><span>Consult Invoice</span></a></li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Payment client</span></a>
+		<li class='has-sub'><a href='#'><span>Customer Payment</span></a>
 		<ul>
-			<li ><a href='payment_client.php'><span>Ajout payment</span></a></li>
-			<li ><a href='payment_client_ancien.php'><span>Ajout ancien payment</span></a></li>
-			<li ><a href='consult_payment_client.php'><span>Liste des payments</span></a></li>
+			<li ><a href='payment_client.php'><span>Add Payment</span></a></li>
+			<li ><a href='payment_client_ancien.php'><span>Add Old Payment</span></a></li>
+			<li ><a href='consult_payment_client.php'><span>Payments List</span></a></li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Payment Fournisseur</span></a>
+		<li class='has-sub'><a href='#'><span>Supplier Payment</span></a>
 		<ul>
-			<li ><a href='gestion_payment_fournisseur.php'><span>Génerer payment</span></a></li>
-			<li ><a href='payment_fournisseur.php'><span>Ajout payment</span></a></li>		          
-			<li ><a href='consult_payment_fournisseur.php'><span>Liste des payments</span></a></li>
+			<li ><a href='gestion_payment_fournisseur.php'><span>Generate Payment</span></a></li>
+			<li ><a href='payment_fournisseur.php'><span>Add Payment</span></a></li>
+			<li ><a href='consult_payment_fournisseur.php'><span>Payments List</span></a></li>
 		</ul>
 		</li>
 		<li class='has-sub'><a href='#'><span>Profit</span></a>
 		<ul>		   
-			<li ><a href='accounting_profit2.php'><span>Accounting profits</span></a></li>
-			<li ><a href='accounting_graphe.php'><span>Graphe Accounting </span></a></li>
+			<li ><a href='accounting_profit2.php'><span>Accounting Profits</span></a></li>
+			<li ><a href='accounting_graphe.php'><span>Graph Accounting </span></a></li>
 			<li ><a href='item_accounting.php'><span>Item Accounting </span></a></li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Modification des prix</span></a>
+		<li class='has-sub'><a href='#'><span>Prices Edition</span></a>
 		<ul>
-			<li ><a href='update_price.php'><span>Update prices </span></a></li>
-			<li ><a href='consult_price_updates.php'><span>Consult updates </span></a></li>			  
+			<li ><a href='update_price.php'><span>Update Prices </span></a></li>
+			<li ><a href='consult_price_updates.php'><span>Consult Updates </span></a></li>
 		</ul>
 		</li>			  
-		<li ><a href='consult_etat_export.php'><span>Etat export </span></a></li>		    
+		<li ><a href='consult_etat_export.php'><span>Export Status</span></a></li>
 		<li ><a href='consult_transaction.php'><span>Transaction </span></a></li> <!--a vérifier -->
 	</ul>
 	</li>
 <!--Documentation -->
 	<li class='has-sub'><a href='#'><span>Documentation </span></a>  
 	<ul>
-		<li><a href='doc_ajout_module.php'><span>New module</span></a></li>
-		<li><a href='doc_ajout_page.php'><span>New page</span></a></li>
-		<li><a href='doc_cosult_page.php'><span>Consult pages</span></a></li>
+		<li><a href='doc_ajout_module.php'><span>New Module</span></a></li>
+		<li><a href='doc_ajout_page.php'><span>New Page</span></a></li>
+		<li><a href='doc_cosult_page.php'><span>Consult Pages</span></a></li>
 	</ul>
 	</li>
 <!--Historique -->
-	<li><a href='historique.php'><span>Historique</span></a></li>
-	<li><a href='echantillant_facture.php'><span>Facture échantillant</span></a></li>
+	<li><a href='historique.php'><span>Historic</span></a></li>
+	<li><a href='echantillant_facture.php'><span>Sample Invoice</span></a></li>
 <!--Restriction client -->
 	<li><a href='excel_to_sql.php'><span>Excel To SQL</span></a></li>
 <!--Demande congé -->	
-	<li><a href='demande_conge.php'><span>Demande de congé</span></a></li>
+	<li><a href='demande_conge.php'><span>Ask For Vacation</span></a></li>
 <!--FIN-->	
 </ul>
 </div>

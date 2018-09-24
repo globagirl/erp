@@ -7,8 +7,8 @@
 		<li><a href='file_commercial.php'><span>Commercial</span></a></li>              
 		<li><a href='file_logistic.php'><span>Logistic</span></a></li>
 		<li><a  href='file_production.php'><span>Production</span></a></li>
-		<li><a  href='file_grh.php'><span>Humain ressource</span></a></li>
+		<li><a  href='file_grh.php'><span>Human Resource</span></a></li>
 		<li><a  href='file_maintenance.php'><span>Maintenance</span></a></li>		
-		<li><a href='demande_conge.php'><span>Demande de congé</span></a></li>			 
+		<li><a href='demande_conge.php'><span>Ask For Vacation</span></a></li>
 	</ul>
 </div>
