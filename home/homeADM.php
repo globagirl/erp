@@ -114,7 +114,7 @@ echo '<div class="col-md-12">';
                    
 					    <div class="input-group">
                         <select name="des" id="D" class="form-control">
-						<option value="s">---Selectionnez</option>
+						<option value="s">---Select</option>
 						<?php
 						$res = mysql_query("SELECT * FROM users1 where ID != '$userID' ");
 						while($data2=mysql_fetch_array($res)) {

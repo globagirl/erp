@@ -29,7 +29,7 @@
 	    <div class="col-md-8">
 		    <!-- /.trans par chéque -->
             <div class="panel panel-default">
-                <div class="panel-heading">Transaction non vérifié  </div>
+                <div class="panel-heading">Not Verified Transaction   </div>
 				<div class="panel-body">
 				    <table  class="table table-fixed results" id="table3">
 					    <thead style="width:100%">       
@@ -37,8 +37,8 @@
 						<th style="width:9.9%;height:60px;text-align:center">Mode</th>
 						<th style="width:11.8%;height:60px;text-align:center">REF</th>
 						<th style="width:14.8%;height:60px;text-align:center">Date</th>
-						<th style="width:39.8%;height:60px;text-align:center" >Catégorie</th>						
-						<th style="width:14.8%;height:60px;text-align:center">Montant</th>
+						<th style="width:39.8%;height:60px;text-align:center" >Category</th>
+						<th style="width:14.8%;height:60px;text-align:center">Amount</th>
 						<th style="width:7.8%;height:60px;text-align:center"></th>
 						
 						
@@ -48,7 +48,7 @@
 						</tbody>
 					</table>
 				</div>
-				 <div class="panel-footer"><input type="button"  id="add1" value="Historique" onClick="historique_trans();" class="btn btn-danger"> </div>
+				 <div class="panel-footer"><input type="button"  id="add1" value="Historic" onClick="historique_trans();" class="btn btn-danger"> </div>
             </div>
 		</div>
         <div class="col-md-4">

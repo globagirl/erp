@@ -1,12 +1,12 @@
 <div class="panel panel-default">
-                <div class="panel-heading">Bande retour non confirmé </div>
+                <div class="panel-heading">Unverified Right Of Return</div>
 				<div class="panel-body">
 				    <table  class="table table-fixed results">
 					    <thead style="width:100%">       
 			            <tr>
-						<th style="width:24.9%;height:60px;text-align:center">Operateur</th>
-						<th style="width:19.8%;height:60px;text-align:center" >Date retour</th>
-						<th style="width:24.8%;height:60px;text-align:center" >Commande</th>						
+						<th style="width:24.9%;height:60px;text-align:center">Operator</th>
+						<th style="width:19.8%;height:60px;text-align:center" >Return Date </th>
+						<th style="width:24.8%;height:60px;text-align:center" >Order</th>
 						<th style="width:14.8%;height:60px;text-align:center" >Type</th>						
 						<th style="width:14.8%;height:60px;text-align:center"></th>						
 				        </tr>
