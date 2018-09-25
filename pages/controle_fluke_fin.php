@@ -112,13 +112,13 @@ Controle Fluke
 			   function del1()
                    {
                   document.forms['pro_sert'].qte_e.value="";
-                  document.forms['pro_sert'].qte_e.style.background="#FFFFFF";;
+                       document.forms['pro_sert'].qte_e.style.background = "#FFFFFF";
                    }
 
 			   function del2()
                    {
                   document.forms['pro_sert'].qte_s.value="";
-                  document.forms['pro_sert'].qte_s.style.background="#FFFFFF";;
+                       document.forms['pro_sert'].qte_s.style.background = "#FFFFFF";
                    }
 ///
 function affichePlan(){

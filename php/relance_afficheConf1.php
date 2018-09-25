@@ -1,6 +1,5 @@
-<?php 
+<?php
 $demande=$_POST['demande'];
-
 include('../connexion/connexionDB.php');
 $sql = mysql_query("SELECT * FROM demande_relance where IDrelance='$demande'");
 $data=mysql_fetch_array($sql);
@@ -14,15 +13,15 @@ echo("<tr><th>Demande ID : </th><td>".$data['IDrelance']."</td></tr>
 ");
 $sql2 = mysql_query("SELECT * FROM demande_relance_items where IDrelance='$demande'");
 while($data2=mysql_fetch_array($sql2)){
-$i++;
-$a="a".$i;
-$q="q".$i;
-echo("<tr><td></td><td><b>Item ".$i.": </b><input type=\"text\"  value=\"".$data2['item']."\"  id=\"".$a."\" name=\"".$a."\"  READONLY >
-<input type=\"text\"  id=\"".$q."\" name=\"".$q."\" value=\"".$data2['qty']."\" READONLY></td></tr>");
-
+    $i++;
+    $a="a".$i;
+    $q="q".$i;
+    echo("<tr><td></td>
+		<td><b>Item ".$i.": </b>
+		<input type=\"text\"  value=\"".$data2['item']."\"  id=\"".$a."\" name=\"".$a."\"  READONLY >
+		<input type=\"text\"  id=\"".$q."\" name=\"".$q."\" value=\"".$data2['qty']."\" READONLY>
+		</td></tr>");
 }
 echo("<tr><td></td><td><input type=\"submit\"  value=\"Confirmer >>\" id=\"submitbutton\" \">
 <input type=\"button\"  value=\" Refuser >>\" id=\"submitbutton\" onClick=\"refuser();\"></td></tr>");
-
-	?>
-	
+?>

@@ -91,7 +91,7 @@ Cable UPM 3
 			   function del1()
                    {
                   document.forms['pro_decoup'].qte_e.value="";
-                  document.forms['pro_decoup'].qte_e.style.background="#FFFFFF";;
+                       document.forms['pro_decoup'].qte_e.style.background = "#FFFFFF";
                    }
 		     
 			 
@@ -99,7 +99,7 @@ Cable UPM 3
 			   function del2()
                    {
                   document.forms['pro_decoup'].qte_s.value="";
-                  document.forms['pro_decoup'].qte_s.style.background="#FFFFFF";;
+                       document.forms['pro_decoup'].qte_s.style.background = "#FFFFFF";
                    }
 		      
 			               

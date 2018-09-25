@@ -97,7 +97,7 @@ document.getElementById("qte_s").value=qte_e;
 
  function del1(){
     document.forms['pro_sert'].qte_e.value="";
-    document.forms['pro_sert'].qte_e.style.background="#FFFFFF";;
+     document.forms['pro_sert'].qte_e.style.background = "#FFFFFF";
  }
 
  function del2() {

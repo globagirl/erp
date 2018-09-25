@@ -53,7 +53,7 @@ $req1= "SELECT * FROM personnel_contrat where etat='$etat'";
 	<td  style=\"text-align:center \">$dateF</td>
 	<td  style=\"text-align:center \">$comp</td>
 	<td  style=\"text-align:center \">$etat</td>
-	<td style=text-align:center><p><img src=\"../image/edit_user.png\" onclick=updateContrat('".$idC."') style=\"cursor:pointer;\" width=\"30\" height=\"30\"  /></td>
+	<td style=text-align:center><p><img src=\"../image/edit_user.png\" onclick=updateContrat('" . $idC . ";  /></td>
 	</tr>";
 	}else if($recherche == "matricule"){
 	$req2= mysql_query("SELECT * FROM personnel_info where matricule ='$mat'");
@@ -71,7 +71,7 @@ $req1= "SELECT * FROM personnel_contrat where etat='$etat'";
 	<td  style=\"text-align:center \">$dateF</td>
 	<td  style=\"text-align:center \">$comp</td>
 	<td  style=\"text-align:center \">$etat</td>
-	<td style=text-align:center><p><img src=\"../image/edit_user.png\" onclick=updateContrat('".$idC."') style=\"cursor:pointer;\" width=\"30\" height=\"30\"  /></td>
+	<td style=text-align:center><p><img src=\"../image/edit_user.png\" onclick=updateContrat('" . $idC . ";  /></td>
 	</tr>";
 	}
     }else if($recherche == "category"){
@@ -90,7 +90,7 @@ $req1= "SELECT * FROM personnel_contrat where etat='$etat'";
 	<td  style=\"text-align:center \">$dateF</td>
 	<td  style=\"text-align:center \">$comp</td>
 	<td  style=\"text-align:center \">$etat</td>
-	<td style=text-align:center><p><img src=\"../image/edit_user.png\" onclick=updateContrat('".$idC."') style=\"cursor:pointer;\" width=\"30\" height=\"30\"  /></td>
+	<td style=text-align:center><p><img src=\"../image/edit_user.png\" onclick=updateContrat('" . $idC . ";  /></td>
 	</tr>";
 	}
     }else if($recherche == "nom"){
@@ -109,7 +109,7 @@ $req1= "SELECT * FROM personnel_contrat where etat='$etat'";
 	<td  style=\"text-align:center \">$dateF</td>
 	<td  style=\"text-align:center \">$comp</td>
 	<td  style=\"text-align:center \">$etat</td>
-	<td style=text-align:center><p><img src=\"../image/edit_user.png\" onclick=updateContrat('".$idC."') style=\"cursor:pointer;\" width=\"30\" height=\"30\"  /></td>
+	<td style=text-align:center><p><img src=\"../image/edit_user.png\" onclick=updateContrat('" . $idC . ";  /></td>
 	</tr>";
 	}
     }

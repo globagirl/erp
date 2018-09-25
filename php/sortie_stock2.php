@@ -4,13 +4,10 @@
  include('../connexion/connexionDB.php');
  $sqlOP=mysql_query("select nom from users1 where ID='$IDoperateur'");
  $operateur=mysql_result($sqlOP,0);
-
  $PRD = $_POST['PRD'];
  $nbr = $_POST['nbr'];
- ///
+ //
     $typeS="Production";
-	
-	
 while($nbr>$i){
 	$i++;
 	$A="A".$i;
@@ -29,12 +26,8 @@ while($nbr>$i){
 	$sql3=mysql_query("UPDATE paquet2 SET qte_res='$qtePaqR' where IDpaquet='$vP'");
 	$sql4=mysql_query("UPDATE article1 SET stock= stock-'$vQ' where code_article='$vA'");
 	//historique
-	$HIS=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','add','sortie_stock1/paquet','$vP',NOW())"); 
-	//
-}	
-
-
+	$HIS=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','add','sortie_stock1/paquet','$vP',NOW())");
+}
      header('Location: ../pages/sortie_stock2.php?status=sent');
      mysql_close();
-
 ?>

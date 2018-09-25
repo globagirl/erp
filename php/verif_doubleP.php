@@ -10,9 +10,9 @@ $sq2=mysql_query("select * FROM personnel_doubleP WHERE newMat='$D'");
 $nbr2=mysql_num_rows($sq2);
 $nbr=$nbr1+$nbr2;
 if($nbr>0){
-echo 1;
+    echo 1;
 }else{
-echo 0;
+    echo 0;
 }
 mysql_close();
 ?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 ///Multiple
 include('../connexion/connexionDB.php');
 $i=1;
@@ -6,7 +6,6 @@ echo("<div id=\"divAdd\"><table><tr>
 <td><center><b> Invoice N°: </b><input type=\"text\" placeholder=\"Invoice N°\" name=\"inv1\" id=\"inv1\" onBlur=verif_invoice2('inv1')></center></td>
 <td><b>Date facturation : </b><input  type=\"date\" name=\"dateF1\" ></td>
 <td><b>Amount : </b>
- 
 <input  type=\"text\" id=\"total1\" name=\"total1\"  size=\"15 \" > 
  <span class=\"custom-dropdown custom-dropdown--white custom-dropdown--small\">
 			<select name=\"devise1\" type=\"text\" class=\"custom-dropdown__select custom-dropdown__select--white\">
@@ -27,7 +26,6 @@ echo("<div id=\"divAdd\"><table><tr>
 	    <option value=\"Cheque\">Par chéque</option>
 	    <option value=\"Virement\">Virement</option>
 	    <option value=\"Autre\">Autre..</option>	 
-
    </select> 
    </span>
 	 </td>
@@ -45,7 +43,6 @@ echo("<div id=\"divAdd\"><table><tr>
 <td>
 <input type=\"button\" onclick=\"addZ();\" id=\"add1\" value=\"+\"  style=\"float:right\">
 </td><td>
-
 <input type=\"button\" onclick=\"deleteZ();\" id=\"add1\" value=\"-\"  style=\"float:left\">
 <input type=\"text\" name=\"nbr\" id=\"nbr\" value=\"1\"  HIDDEN>
 </td>
@@ -53,5 +50,4 @@ echo("<div id=\"divAdd\"><table><tr>
 </td>
 </tr>
 </table>");
-	?>
-	
+?>

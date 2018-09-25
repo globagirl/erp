@@ -1,38 +1,35 @@
- <?php
+<?php
 include('../connexion/connexionDB.php');
-
 $article=@$_POST['article'];
 $newStock=@$_POST['newStock'];
 $datePREV=@$_POST['dateP'];
-  $req1=mysql_query ("SELECT * FROM article_prevision where idART='$article' ");
-  $req101=mysql_query ("SELECT count(numArt) FROM article_prevision where aff='V'");
-  $nbr=mysql_result($req101,0); 
-  $req191=mysql_query ("SELECT max(numArt) FROM article_prevision where aff='V'");
-  $max=mysql_result($req101,0);
-  if(mysql_num_rows($req1)>0){
-  
-  $a=mysql_fetch_object($req1);
-  
+$req1=mysql_query ("SELECT * FROM article_prevision where idART='$article' ");
+$req101=mysql_query ("SELECT count(numArt) FROM article_prevision where aff='V'");
+$nbr=mysql_result($req101,0);
+$req191=mysql_query ("SELECT max(numArt) FROM article_prevision where aff='V'");
+$max=mysql_result($req101,0);
+if(mysql_num_rows($req1)>0){
+    $a=mysql_fetch_object($req1);
     $stockART =$a->stockART;
-	if($datePREV==""){
-	$stockART=$stockART+$newStock;
-	}
+    if($datePREV==""){
+        $stockART=$stockART+$newStock;
+    }
     $art =$a->idART;
     $num =$a->numART;
 //Affichage du tableau 
-echo '<thead style="width:96.8%">
+    echo '<thead style="width:96.8%">
             <tr>
                <th style="width:20%;height:40px" class="degraD">';
-			   if($num >1){
-			   echo '
+    if($num >1){
+        echo '
 			   <input type="button" value="<<" onClick=nextART("DEB");>
 			   <input type="button" value="<"  onClick=nextART("-1");>';
-			   }else{
-			    echo '
+    }else{
+        echo '
 			   <input type="button" value="<<" DISABLED>
 			   <input type="button" value="<" DISABLED> ';
-			   }
-			   echo '
+    }
+    echo '
 			   </th>
 				<th style="width:60%;height:40px" class="degraD">
 				<center>
@@ -40,23 +37,21 @@ echo '<thead style="width:96.8%">
 				<b>'.$num.'/'.$nbr.'</b>
 				</center></th>
 				<th style="width:20%;height:40px" class="degraD">';
-				if($num < $max){
-			   echo '
+    if($num < $max){
+        echo '
 			   <input type="button" value=">" onClick=nextART("1");>
 			   <input type="button" value=">>" onClick=nextART("FIN");>';
-			   }else{
-			    echo '
+    }else{
+        echo '
 			   <input type="button" value=">" DISABLED>
 			   <input type="button" value=">>" DISABLED> ';
-			   }
-				
-				echo '
+    }
+    echo '
 				</th>			  
             </tr>
 			<tr><th style="width:100%;height:40px" class="degraD">
 			<center><input type="text" id="STOCKart" value="'.$stockART.'"size="10"READONLY><input type="button" value="+" onClick="addStock()">
 			   <input type="button" value="Reset" onClick="resetStock()"></center></th>
-			
 			</tr>
 			<tr>
                <th style="width:32%;height:30px" class="degraD">IN</th>
@@ -65,84 +60,75 @@ echo '<thead style="width:96.8%">
             </tr>
           </thead>
 		   <tbody id="tbody2">'; //FIN affichage 
-$req4= mysql_query("SELECT * FROM po_prevision ");
-   while($a4=mysql_fetch_object($req4))
+    $req4= mysql_query("SELECT * FROM po_prevision ");
+    while($a4=mysql_fetch_object($req4))
     {
-    $num=$a4->num;
-    $PO=$a4->po;
-    $item=$a4->item;
-    $dateEX=$a4->dateEX;
-    $dateE=$a4->dateE;
-    $typeP=$a4->typeP;
-    $qteD=$a4->qty;
-	$col=$a4->col;
-	$cl=$num."cl";
-    if($dateEX >= $datePREV and $datePREV != ""){
-    $stockART=$stockART+$newStock;
-	$stockART=round($stockART,4); 
-	$datePREV="";
-    }	
-    if($typeP=='OA'){
-	
-	if($item==$art){
-	$stockART=$stockART+$qteD;	
-	$stockART=round($stockART,4); 
-    if($stockART<0){
-	$col2="#FA5858";
-	}else{
-	$col2=$col;
-	}	
-	echo('<tr id='.$num.'><td class='.$cl.' style="width:32%;background-color:'.$col.';text-align:center">'.$qteD.'</td>
+        $num=$a4->num;
+        $PO=$a4->po;
+        $item=$a4->item;
+        $dateEX=$a4->dateEX;
+        $dateE=$a4->dateE;
+        $typeP=$a4->typeP;
+        $qteD=$a4->qty;
+        $col=$a4->col;
+        $cl=$num."cl";
+        if($dateEX >= $datePREV and $datePREV != ""){
+            $stockART=$stockART+$newStock;
+            $stockART=round($stockART,4);
+            $datePREV="";
+        }
+        if($typeP=='OA'){
+            if($item==$art){
+                $stockART=$stockART+$qteD;
+                $stockART=round($stockART,4);
+                if($stockART<0){
+                    $col2="#FA5858";
+                }else{
+                    $col2=$col;
+                }
+                echo('<tr id='.$num.'><td class='.$cl.' style="width:32%;background-color:'.$col.';text-align:center">'.$qteD.'</td>
 	<td class='.$cl.' style="width:32%;background-color:'.$col.';text-align:center">0</td>
 	<td class='.$cl.' style="width:32%;background-color:'.$col2.';text-align:center">'.$stockART.'</td></tr>');
-	}else{
-     if($stockART<0){
-	$col2="#FA5858";
-	}else{
-	$col2=$col;
-	}	
-	echo('<tr id='.$num.'><td class='.$cl.' style="width:32%;background-color:'.$col.';text-align:center">0</td>
+            }else{
+                if($stockART<0){
+                    $col2="#FA5858";
+                }else{
+                    $col2=$col;
+                }
+                echo('<tr id='.$num.'><td class='.$cl.' style="width:32%;background-color:'.$col.';text-align:center">0</td>
 	<td class='.$cl.' style="width:32%;background-color:'.$col.';text-align:center">0</td>
 	<td class='.$cl.' style="width:32%;background-color:'.$col2.';text-align:center">'.$stockART.'</td></tr>');
-	}	
-	//
-	}else{
-	
-	$req42= mysql_query("SELECT * FROM produit_article1 where IDproduit ='$item' and IDarticle='$art'");
-	if(mysql_num_rows($req42)>0){
-   $a42=mysql_fetch_object($req42);     
-    $qteB=$a42->qte;
-    $qteS=$qteB*$qteD;
-	$stockART=$stockART-$qteS;
-   $stockART=round($stockART,4); 
-	if($stockART<0){
-	$col2="#FA5858";
-	}else{
-	$col2=$col;
-	}
-	echo('<tr id='.$num.'><td class='.$cl.' style="width:32%;text-align:center ;background-color:'.$col.'">0</td>
+            }
+        }else{
+            $req42= mysql_query("SELECT * FROM produit_article1 where IDproduit ='$item' and IDarticle='$art'");
+            if(mysql_num_rows($req42)>0){
+                $a42=mysql_fetch_object($req42);
+                $qteB=$a42->qte;
+                $qteS=$qteB*$qteD;
+                $stockART=$stockART-$qteS;
+                $stockART=round($stockART,4);
+                if($stockART<0){
+                    $col2="#FA5858";
+                }else{
+                    $col2=$col;
+                }
+                echo('<tr id='.$num.'><td class='.$cl.' style="width:32%;text-align:center ;background-color:'.$col.'">0</td>
 	<td class='.$cl.' style="width:32%;text-align:center ;background-color:'.$col.'">'.$qteS.'</td>
 	<td class='.$cl.' style="width:32%;text-align:center ;background-color:'.$col2.'">'.$stockART.'</td></tr>');
-	
-	}else{	
-	if($stockART<0){
-	$col2="#FA5858";
-	}else{
-	$col2=$col;
-	}
-	echo('<tr id='.$num.'><td class='.$cl.' style="width:32%;text-align:center ;background-color:'.$col.'">0</td>
+            }else{
+                if($stockART<0){
+                    $col2="#FA5858";
+                }else{
+                    $col2=$col;
+                }
+                echo('<tr id='.$num.'><td class='.$cl.' style="width:32%;text-align:center ;background-color:'.$col.'">0</td>
 	<td class='.$cl.' style="width:32%;text-align:center ;background-color:'.$col.'">0</td>
 	<td class='.$cl.' style="width:32%;text-align:center ;background-color:'.$col2.'">'.$stockART.'</td></tr>');
-	}
-
-	}
-		
- }
-
-
- echo ("</tbody>");
- }else{
- echo 0 ;
- }
-
-  ?>
+            }
+        }
+    }
+    echo ("</tbody>");
+}else{
+    echo 0 ;
+}
+?>

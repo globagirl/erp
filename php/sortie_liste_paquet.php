@@ -6,7 +6,7 @@ $res = mysql_query($sql) or exit(mysql_error());
 echo '<option value="S">---Selectionnez</option><br/>';
 echo '<option value="R">---Rebut</option><br/>';
 while($data=mysql_fetch_array($res)) {
-   echo '<option value="'.$data["IDpaquet"].'">'.$data["IDpaquet"].'</option><br/>'; 
+    echo '<option value="'.$data["IDpaquet"].'">'.$data["IDpaquet"].'</option><br/>';
 }
 mysql_close();
 ?>

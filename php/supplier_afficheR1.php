@@ -1,4 +1,4 @@
-<?php 
+<?php
 ///service , credit note , expense
 $i="1";
 echo("<table>
@@ -21,7 +21,6 @@ echo("<table>
     <td style=\"text-align:left\">
 	    <input type=\"file\" name=\"imgFact[]\"  multiple>
     </td>
-	
 </tr>
 <tr>	
     <td style=\"text-align:right\"> 
@@ -30,7 +29,6 @@ echo("<table>
     </td>
 	<td style=\"text-align:center\">
 	<b>Date payment:  </b><input type=\"date\" name=\"dateP\" id=\"dateP\">
-	 
 	</td>
 	<td style=\"text-align:left\">
 	<span class=\"custom-dropdown custom-dropdown--white custom-dropdown--small\" >
@@ -39,16 +37,12 @@ echo("<table>
 	    <option value=\"Cheque\">Par chéque</option>
 	    <option value=\"Virement\">Virement</option>
 	    <option value=\"Autre\">Autre..</option>	 
-
    </select> 
    </span>
-	
     </td>
 </tr>
 <tr>
-    
 	<td colspan=2 id='zoneMP1' style=\"text-align:right\">
-	
     </td>		
     <td style=\"text-align:left\" >
 	<input type=\"button\" onclick=\"addI1();\" id=\"add1\" value=\"Submit >> \"  style=\"float:left\">
@@ -56,4 +50,3 @@ echo("<table>
 </tr>
 </table>");
 ?>
-	

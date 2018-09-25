@@ -1,4 +1,4 @@
-<?php 
+<?php
 include('../connexion/connexionDB.php');
 $art=$_POST['art'];
 $sql = mysql_query("SELECT stock FROM article1 where code_article LIKE '$art'");

@@ -44,19 +44,15 @@ echo("<table>
 	    <option value=\"Cheque\">Par chéque</option>
 	    <option value=\"Virement\">Virement</option>
 	    <option value=\"Autre\">Autre..</option>
-
-   </select>
-   </span>
+     </select>
+    </span>
 
     </td>
 </tr>
 <tr>
-
-	<td colspan=2 id='zoneMP1' style=\"text-align:right\">
-
-    </td>
+	<td colspan=2 id='zoneMP1' style=\"text-align:right\"></td>
     <td style=\"text-align:left\" >
-	<input type=\"button\" onclick=\"addI4();\" id=\"add1\" value=\"Submit >> \"  style=\"float:left\">
+	    <input type=\"button\" onclick=\"addI4();\" id=\"add1\" value=\"Submit >> \"  style=\"float:left\">
     </td>
 </tr>
 </table>");

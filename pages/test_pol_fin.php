@@ -86,7 +86,7 @@ document.getElementById("qte_s").value=qte_e;
 		     
  function del2(){
     document.forms['pro_test'].qte_s.value="";
-    document.forms['pro_test'].qte_s.style.background="#FFFFFF";;
+     document.forms['pro_test'].qte_s.style.background = "#FFFFFF";
  }
 		      
 /////			                
