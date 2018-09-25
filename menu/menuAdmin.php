@@ -161,10 +161,10 @@
         </ul>
         </li>
 <!--        Not translated-->
-		<li class='has-sub'><a href='#'><span>Relance</span></a>
+		<li class='has-sub'><a href='#'><span>Replacement</span></a>
 		<ul>
-		 	<li><a href='bande_relance.php'><span>Demande relance</span></a></li>
-		 	<li><a href='consult_bande_relance.php'><span>Consulter relance</span></a></li>
+		 	<li><a href='bande_relance.php'><span>Replacement Request</span></a></li>
+		 	<li><a href='consult_bande_relance.php'><span>Consult Replacement</span></a></li>
 		  	<li><a href='relance_confirmation1.php'><span>Quality Confirmation </span></a></li>
 		  	<li><a href='relance_confirmation2.php'><span>Direction Confirmation  </span></a></li>
 		</ul>
@@ -214,7 +214,7 @@
 			<li><a href='consult_bande_retour.php'><span>Return Note List</span></a></li>
 		</ul>
 		</li>
-		<li class='has-sub'><a href='#'><span>Relance </span></a>
+		<li class='has-sub'><a href='#'><span>Replacement </span></a>
 		<ul>
 			<li><a href='bande_relance.php'><span>Bon de relance</span></a></li>   
 			<li><a href='consult_bande_relance.php'><span>Liste des bons</span></a></li>   
