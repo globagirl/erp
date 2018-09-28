@@ -30,6 +30,5 @@ if($statut=="ALL"){
   while($a=mysql_fetch_array($r)){
 	      affiche_ligne($a,$dateA);
     }
-
 mysql_close();
   ?>

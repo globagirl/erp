@@ -150,7 +150,7 @@ if( !isset($_SESSION["role"]) ){
                                                 <input type= "file" name="fileP1" id="fileP1" class="form-control"/>
                                             </div>
                                             <div class="form-group">
-                                                <input type="button" class="btn btn-primary" value="Add >> " id ="add" onclick="verifier();">
+                                                <input type="button" class="btn btn-primary" value="Add >> " id ="add;j" onclick="verifier();">
                                             </div>
                                         </div>
                                     </div>

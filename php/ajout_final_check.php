@@ -7,16 +7,17 @@
  */
 session_start();
 $IDoperateur=$_SESSION['userID'];
-include('../connexion/connexionDB.php');
+require'../connexion/connexionPDO.php';
 $PO=@$_POST['PO'];
 $date=@$_POST['date'];
-
 $fichier = $_FILES['imgFact'];
 if(isset($_POST['add'])) {
+    for ($i = 0; $i < count($fichier['name']); $i++) {
         $F = $fichier['name'][$i];
         //verifier existance
-        $sqlF = mysql_query("SELECT * from invoice_files where nameF like '%$F'");
-        $max1 = mysql_num_rows($sqlF);
+        $req = $con->prepare("SELECT * from file_final_check where nameF like '%$F'");
+        $req->execute();
+        $max1 = $req->rowCount();
         $max1++;
         $fichierName = $max1 . '-' . $F;
         //
@@ -24,11 +25,18 @@ if(isset($_POST['add'])) {
         $taille = filesize($fichier['tmp_name'][$i]);
         $typeF = $fichier['type'][$i];
         rename($F, $fichierName);
-        $destination = '../files/invoices/' . $fichierName;
+        $destination = '../files/finalCheck/' . $fichierName;
         if (move_uploaded_file($fichier1, $destination)) {
-            $sql1 = mysql_query("INSERT INTO file_final_check (nameF, typeF, sizeF,DateS, dataF,PO) VALUES ('$fichierName','$typeF','$taille',$date,'$destination','$PO')");
+            $request = "INSERT INTO file_final_check (nameF, typeF, sizeF,DateS, dataF,PO) VALUES ('$fichierName','$typeF','$taille',$date,'$destination','$PO')";
+            $stmt = $con->prepare($request);
+            $test = $stmt->execute();
+            if ($test) {
+                echo "<h3 style='color: green'>Added successfully</h3>";
+            }
         } else {
             echo("PLZ contact the system manager !!");
         }
+    }
 }
 ?>
+
