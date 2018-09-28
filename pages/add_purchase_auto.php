@@ -5,6 +5,7 @@
  * Date: 28/09/2018
  * Time: 15:32
  */
+
 session_start ();
 if( !isset($_SESSION["role"]) ){
     header('Location: ../index.php');
