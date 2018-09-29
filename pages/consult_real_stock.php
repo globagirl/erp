@@ -7,14 +7,14 @@
  */
 
 session_start ();
-//if( !isset($_SESSION["role"]) ){
-//    header('Location: ../index.php');
-//    exit();
-//}else {
-//    $role = $_SESSION['role'];
-//    $userID = $_SESSION['userID'];
-    include('../connexion/connexionPDO.php');
-//}
+if( !isset($_SESSION["role"]) ){
+    header('Location: ../index.php');
+    exit();
+}else {
+    $role = $_SESSION['role'];
+    $userID = $_SESSION['userID'];
+    include('../connexion/connexionDB2.php');
+}
 ?>
 <html>
 <head>
@@ -42,17 +42,15 @@ session_start ();
     <div id="menu">
         <div id="menu">
             <?php
-//            if($role=="ADM"){
-               include('../menu/menuAdmin.php');
-//            }else if($role=="MAG"){
-//                include('../menu/menuMagazin.php');
-//            }else if($role=="COM"){
-//                include('../menu/menuCommercial.php');
-//            }else if($role=="LOG"){
-//                include('../menu/menuLogistique.php');
-//            }else{
-//                header('Location: ../deny.php');
-//            }
+            if($role=="ADM"){
+                include('../menu/menuAdmin.php');
+            }else if($role=="MAG"){
+                include('../menu/menuMagazin.php');
+            }else if($role=="COM"){
+                include('../menu/menuCommercial.php');
+            }else{
+                header('Location: ../deny.php');
+            }
             ?>
         </div>
     </div>
@@ -79,8 +77,8 @@ session_start ();
                                             </span>
                                         </div>
                                         <div  class="form-group col-md-6">
-<!--                                            <label>Date antérieur :</label>-->
-<!--                                            <input type="date" class="search form-control" name="dateA" id="dateA" >-->
+                                            <!--                                            <label>Date antérieur :</label>-->
+                                            <!--                                            <input type="date" class="search form-control" name="dateA" id="dateA" >-->
                                         </div>
                                         <div  class="form-group col-md-12">
                                             <input type="button" onClick="affiche_sortie();" class="btn btn-primary" Value=">>Search ">
@@ -101,6 +99,15 @@ session_start ();
                                                 <tbody id="tbody2" >
                                                 <?php
                                                 //affiche stock
+                                                $sql =(mysql_query('SELECT code_article, statut, stock, qte_recue, Date_prevue, (stock+qte_recue) AS calcul FROM article1 A INNER JOIN ordre_achat_article1 B ON A.code_article = B.IDarticle AND statut="waiting" ')or die(mysql_error()));
+                                                $data=mysql_result($sql,0);
+                                                $NbreData = mysql_num_rows($sql);	// nombre d'enregistrements (lignes)
+                                                $rowAll = mysql_fetch_array($sql);
+                                                // pour chaque ligne (chaque enregistrement)
+                                                foreach ( $rowAll as $row )
+                                                {
+                                                   echo $data;
+                                                } // fin foreach
                                                 ?>
                                                 </tbody>
                                             </table>

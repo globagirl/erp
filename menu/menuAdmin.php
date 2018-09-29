@@ -17,6 +17,7 @@
                 <li class='has-sub'><a href='#'><span> Manage Purchases</span></a>
                     <ul>
                         <li><a href='ajout_ordre_achat.php'><span> Add Purchase Order </span></a></li>
+                        <li><a href='add_purchase_auto.php'><span>Order Auto-update</span></a></li>
                         <li><a href='consult_ordre_achat.php'><span> Consult Purchase Order </span></a></li>
                         <li><a href='update_ordre_achat.php'><span> Edit Purchase Order </span></a></li>
                         <li><a href='print_oa.php'><span> Print Order </span></a></li>
@@ -200,7 +201,8 @@
                 </li>
                 <li class='has-sub'><a href='#'><span> Consultation </span></a>
                     <ul>
-                        <li><a href='consult_stock.php'><span>Stock Consult </span></a></li>
+                        <li><a href='consult_stock.php'><span>Real Stock Consult </span></a></li>
+                        <li><a href='consult_real_stock.php'><span>Complete Stock Consult </span></a></li>
                         <li><a href='consult_paquet.php'><span>Consult Package</span></a></li>
                         <li><a href='print_barcode.php'><span> Print Package Code </span></a></li>
                     </ul>

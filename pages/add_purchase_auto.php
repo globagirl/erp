@@ -135,7 +135,7 @@ if(!empty($_GET['status']))
 {
     $status = $_GET['status'];
     if  ($status=="sent"){
-        echo '<SCRIPT LANGUAGE="JavaScript">alert(\'Order added successfully  \');</SCRIPT>';
+        echo '<SCRIPT LANGUAGE="JavaScript">alert(\'Order updated successfully  \');</SCRIPT>';
     } else if ($status=="fail"){
         echo '<SCRIPT LANGUAGE="JavaScript">alert(\'FAIL !! PLZ try again \');</SCRIPT>';
     }

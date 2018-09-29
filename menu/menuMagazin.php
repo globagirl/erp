@@ -9,7 +9,8 @@
         <li><a href='print_reception.php'><span>Print Reception</span></a></li>
         <li class='has-sub'><a href='#'><span> Consult </span></a>
             <ul>
-                <li><a href='consult_stock.php'><span> Consult Stock </span></a></li>
+                <li><a href='consult_stock.php'><span> Consult Real Stock </span></a></li>
+                <li><a href='consult_real_stock.php'><span>Complete Stock Consult </span></a></li>
                 <li><a href='consult_paquet.php'><span>Package</span></a></li>
                 <li><a href='consult_reception.php'><span>Receptions List</span></a></li>
                 <li class='last'><a href='consult_ordre_achat_MAG.php'><span> Purchase Orders List </span></a></li>

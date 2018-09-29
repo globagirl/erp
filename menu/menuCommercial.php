@@ -13,6 +13,7 @@
         <li class='has-sub'><a href='#'><span> Manage Purchases </span></a>
             <ul>
                 <li><a href='ajout_ordre_achat.php'><span> Add Purchase Order </span></a></li>
+                <li><a href='add_purchase_auto.php'><span>Order Auto-update</span></a></li>
                 <li><a href='consult_ordre_achat.php'><span> Consult Purchase Order </span></a></li>
                 <li><a href='update_ordre_achat.php'><span> Edit Purchase Order </span></a></li>
                 <li><a href='print_oa.php'><span> Print Order </span></a></li>
@@ -61,7 +62,12 @@
                 <li class='last'><a href='consult_demande_devis.php'><span> Consult Request  </span></a></li>
             </ul>
         </li>
-        <li><a href='consult_stock.php'><span>Consult Stock</span></a></li>
+        <li class='has-sub'><a href='#'><span> Currency Request </span></a>
+            <ul>
+                <li><a href='consult_stock.php'><span>Consult Real Stock</span></a></li>
+                <li><a href='consult_real_stock.php'><span>Complete Stock Consult </span></a></li>
+            </ul>
+        </li>
         <li class='has-sub'><a href='#'><span>Manage Customers </span></a>
             <ul>
                 <li><a href='consult_client.php'><span>Consult Customer</span></a></li>
