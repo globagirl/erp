@@ -104,16 +104,11 @@ if( !isset($_SESSION["role"]) ){
                 i--;
                 document.getElementById('nbr').value=i;
             }
-
         }
-
-
-
         //POP UP
         function pop_up(url){
             window.open(url,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=1076,height=768,directories=no,location=no')
         }
-
         //Vérification produit
         function verifierProduit(P,Q,PU,PT){
             var prd=document.getElementById(P).value;
@@ -247,11 +242,9 @@ if( !isset($_SESSION["role"]) ){
                 success: function(data) {
                     var PO ="PO"+data;
                     document.getElementById("PO").value=PO;
-
                 }
             });
         }
-
     </script>
 </head>
 <body onLoad="affichelisteC();">
@@ -264,19 +257,16 @@ if( !isset($_SESSION["role"]) ){
         ?>
     </div>
 </div>
-
 <div id="main">
     <div id="menu">
         <?php
         if($role=="ADM"){
             include('../menu/menuAdmin.php');
         }
-
         elseif($role=="COM"){
             include('../menu/menuCommercial.php');
         }
         else{
-
             header('Location: ../deny.php');
         }
         ?>
