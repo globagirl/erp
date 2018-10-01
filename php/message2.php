@@ -26,11 +26,11 @@ if(move_uploaded_file($fichier1,$destination)){
     $msg2= $msg." <a href=\"../files/messageFiles/".$fichierName."\" target=\"_blank\">".$fichierName."</a>";
     $sql4=mysql_query("INSERT INTO message(emetteur, destinataire, messageText, dateM,fileM) VALUES ('$IDuser','$des','$msg2',NOW(),'$fichierName')");
     //Notification
-    $msg= " Vous avez reçue un message de la part de <b>".$user."</b>";
+    $msg= " you've got a message From : <b>".$user."</b>";
     $sql4=mysql_query("INSERT INTO notification(emetteur, destinataire, message, dateN,chemin) VALUES ('$user','$des','$msg',NOW(),'msg')");
     header('Location: ../pages/home.php');
 }else{
-    echo("Contactez le responsable Systéme SVP !!");
+    echo("PLZ contact the system manager!!");
 }
 mysql_close();
 ?>

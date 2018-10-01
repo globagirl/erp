@@ -62,10 +62,10 @@
                 <li class='last'><a href='consult_demande_devis.php'><span> Consult Request  </span></a></li>
             </ul>
         </li>
-        <li class='has-sub'><a href='#'><span> Currency Request </span></a>
+        <li class='has-sub'><a href='#'><span>Consult Stock </span></a>
             <ul>
-                <li><a href='consult_stock.php'><span>Consult Real Stock</span></a></li>
-                <li><a href='consult_real_stock.php'><span>Complete Stock Consult </span></a></li>
+                <li><a href='consult_stock.php'><span> Real Stock</span></a></li>
+                <li><a href='consult_real_stock.php'><span>Complete Stock  </span></a></li>
             </ul>
         </li>
         <li class='has-sub'><a href='#'><span>Manage Customers </span></a>

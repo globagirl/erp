@@ -32,6 +32,20 @@ if( !isset($_SESSION["role"]) ){
     <script src="../bootstrap/js/bootbox.min.js"></script>
     <script type='text/javascript' src="../include/scripts/consult_bande_sortie.js"></script>
     <title> Consult Complete Stock</title>
+    <script>
+        function affiche_sortie(){
+            //alert ("hhhhhh");
+            $('#tbody2').html('<tr><td style="width:100%"> <center><img src="../image/load.gif"  alt="Print" style="cursor:pointer;" width="300" height="250"/></center></td></tr>');
+            var val = document.getElementById("valeur").value;
+            $.ajax({
+                type: 'POST',
+                data: 'valeur='+val,
+                url: '../php/consult_real_stock.php',
+                success: function(data) {
+                    $('#tbody2').html(data);
+                }});
+        }
+    </script>
 </head>
 <body>
 <div id="entete" style=" width: 100%">
@@ -99,17 +113,18 @@ if( !isset($_SESSION["role"]) ){
                                                 <tbody id="tbody2" >
                                                 <?php
                                                 //affiche stock
-                                                $sql =mysql_query('SELECT code_article, statut, stock, qte_recue, Date_prevue, (stock+qte_recue) AS calcul FROM article1 , ordre_achat_article1 WHERE article1.code_article = ordre_achat_article1.IDarticle AND ordre_achat_article1.statut="waiting" ');
-                                                $result = mysql_query($sql) or die ('Error : '.mysql_error() );
-                                                ?>
-                                                <tr>
-                                                    <?php while($row = mysql_fetch_array($result)) { ?>
-                                                    <td><?php  echo $row['code_article'];?></td>
-                                                    <td><?php  echo $row['stock'];?></td>
-                                                    <td><?php  echo $row['dateR'];?></td>
-                                                    <td><?php  echo $row['calcul'];?></td>
-                                                </tr>
-                                                <?php  } //pour finir la boucle?>
+                                                $sql =mysql_query('SELECT IDarticle, qte_demande , Date_prevue  FROM ordre_achat_article1 WHERE Date_prevue > NOW() ORDER BY Date_prevue');
+                                                $s2=mysql_query('SELECT article1.stock FROM article1, ordre_achat_article1 WHERE article1.code_article = ordre_achat_article1.IDarticle ');
+                                                 while(($row = mysql_fetch_array($sql))&&($row2 = mysql_fetch_array($s2)) ){
+                                                        $sum=$row2['stock']+$row['qte_demande'];
+                                                        echo '<tr>';
+                                                        echo'<td style="width:15%;height:60px;text-align:center">' .$row['IDarticle'].'</td>';
+                                                        echo'<td style="width:15%;height:60px;text-align:center">'.$row2['stock'].'</td>';
+                                                        echo'<td style="width:15%;height:60px;text-align:center">' .$row['Date_prevue'].'</td>';
+                                                        echo'<td style="width:15%;height:60px;text-align:center">' . $sum .'</td>';
+                                                        echo '</tr>';
+                                                    } //pour finir la boucle
+                                                    ?>
                                                 </tbody>
                                             </table>
                                         </div>

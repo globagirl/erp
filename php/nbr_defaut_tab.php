@@ -5,12 +5,12 @@ $DF=$_POST['date2'];
 echo '<table class="table">
             <thead>
                 <tr>
-                    <th>Lundi</th>
-                    <th>Mardi</th>
-                    <th>Mercredi</th>
-                    <th>Jeudi</th>
-                    <th>Vendredi</th>
-                    <th>Samedi</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Sunday</th>
                 </tr>
             </thead>
             <tbody>';
