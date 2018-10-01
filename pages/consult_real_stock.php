@@ -99,16 +99,17 @@ if( !isset($_SESSION["role"]) ){
                                                 <tbody id="tbody2" >
                                                 <?php
                                                 //affiche stock
-                                                $sql =(mysql_query('SELECT code_article, statut, stock, qte_recue, Date_prevue, (stock+qte_recue) AS calcul FROM article1 A INNER JOIN ordre_achat_article1 B ON A.code_article = B.IDarticle AND statut="waiting" ')or die(mysql_error()));
-                                                $data=mysql_result($sql,0);
-                                                $NbreData = mysql_num_rows($sql);	// nombre d'enregistrements (lignes)
-                                                $rowAll = mysql_fetch_array($sql);
-                                                // pour chaque ligne (chaque enregistrement)
-                                                foreach ( $rowAll as $row )
-                                                {
-                                                   echo $data;
-                                                } // fin foreach
+                                                $sql =mysql_query('SELECT code_article, statut, stock, qte_recue, Date_prevue, (stock+qte_recue) AS calcul FROM article1 , ordre_achat_article1 WHERE article1.code_article = ordre_achat_article1.IDarticle AND ordre_achat_article1.statut="waiting" ');
+                                                $result = mysql_query($sql) or die ('Error : '.mysql_error() );
                                                 ?>
+                                                <tr>
+                                                    <?php while($row = mysql_fetch_array($result)) { ?>
+                                                    <td><?php  echo $row['code_article'];?></td>
+                                                    <td><?php  echo $row['stock'];?></td>
+                                                    <td><?php  echo $row['dateR'];?></td>
+                                                    <td><?php  echo $row['calcul'];?></td>
+                                                </tr>
+                                                <?php  } //pour finir la boucle?>
                                                 </tbody>
                                             </table>
                                         </div>
