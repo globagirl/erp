@@ -39,12 +39,10 @@ if( !isset($_SESSION["role"]) ){
         if($role=="ADM"){
             include('../menu/menuAdmin.php');
         }
-
         elseif($role=="LOG"){
             include('../menu/menuLogistique.php');
         }
         else{
-
             header('Location: ../deny.php');
         }
         ?>

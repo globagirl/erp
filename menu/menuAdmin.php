@@ -429,6 +429,7 @@
         <li><a href='excel_to_sql.php'><span>Excel To SQL</span></a></li>
         <!--Demande congé -->
         <li><a href='demande_conge.php'><span>Ask For Vacation</span></a></li>
+        <li><a href='inactif.php'><span>inactive</span></a></li>
         <!--FIN-->
     </ul>
 </div>

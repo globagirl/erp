@@ -26,5 +26,6 @@
             </ul>
         </li>
         <li><a href='demande_conge.php'><span>Ask For Vacation</span></a></li>
+        <li><a href='inactif.php'><span>INACTIVE</span></a></li>
     </ul>
 </div>

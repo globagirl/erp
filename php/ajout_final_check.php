@@ -7,12 +7,12 @@
  */
 session_start();
 $IDoperateur=$_SESSION['userID'];
-require'../connexion/connexionPDO.php';
+require'../connexion/connexionDB.php';
 $PO=@$_POST['PO'];
 $date=@$_POST['date'];
 $fichier = $_FILES['imgFact'];
 if(isset($_POST['add'])) {
-    for ($i = 0; $i < count($fichier['name']); $i++) {
+    for ($i = 0; $i < count($fichier['nameF']); $i++) {
         $F = $fichier['name'][$i];
         //verifier existance
         $req = $con->prepare("SELECT * from file_final_check where nameF like '%$F'");
@@ -31,12 +31,11 @@ if(isset($_POST['add'])) {
             $stmt = $con->prepare($request);
             $test = $stmt->execute();
             if ($test) {
-                echo "<h3 style='color: green'>Added successfully</h3>";
+                header('Location: ../pages/add_final_check.php?status=sent');
             }
         } else {
-            echo("PLZ contact the system manager !!");
+            header('Location: ../pages/add_final_check.php?status=fail');
         }
     }
 }
 ?>
-

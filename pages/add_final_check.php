@@ -68,6 +68,8 @@ if( !isset($_SESSION["role"]) ){
                 alert("PLZ Enter a date !!");
                 document.getElementById('client').style.backgroundColor='pink';
                 V=1;
+            }else{
+                document.forms['form'].submit();
             }
         }
         // auto complete po
@@ -143,14 +145,14 @@ if( !isset($_SESSION["role"]) ){
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label>PO : </label>
-                                                <input type= "text" name="po" id="PO" class="form-control" onkeyup="autoComplete()" onkeydown="hideListe()" onblur="verifierPO()"/>
+                                                <input type= "text" name="po" id="PO" class="form-control" onkeyup="autoComplete()" onkeydown="hideListe()" "/>
                                                 <label>Date : </label>
                                                 <input type= "Date" name="date" id="date" class="form-control"/>
                                                 <label>PDF File </label>
                                                 <input type= "file" name="fileP1" id="fileP1" class="form-control"/>
                                             </div>
                                             <div class="form-group">
-                                                <input type="button" class="btn btn-primary" value="Add >> " id ="add;j" onclick="verifier();">
+                                                <input type="button" class="btn btn-primary" value="Add >> " id ="add" onclick="verifier();">
                                             </div>
                                         </div>
                                     </div>
@@ -161,5 +163,6 @@ if( !isset($_SESSION["role"]) ){
                 </div>
             </div>
         </div>
+    </div>
 </body>
 </html>
