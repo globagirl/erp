@@ -12,7 +12,8 @@ if (!mysql_query($sql)) {
     header('Location: ../pages/relance_confirmation1.php?status=fail');
 }else{
 //Notification
-    $msg= " ".$user."  a confirmé la demande de relance N° :  ".$demande."";
+    // traduction relance = replacement
+    $msg= " ".$user." has confirmed the request of replacement N ° :  ".$demande."";
     $sql4=mysql_query("INSERT INTO notification(emetteur, destinataire, message, dateN,chemin) VALUES ('$user','FIN','$msg',NOW(),'relance_confirmation2.php')");
     //Historique
     $His=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','add','confirmation relance','$demande',NOW())");

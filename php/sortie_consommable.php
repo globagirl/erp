@@ -18,12 +18,12 @@ while($nbr>$j){
         $sql3=mysql_query("UPDATE demande_items SET qtyS='$QTY' WHERE IDconsommable='$CONS' AND IDdemande='$idD'");
         $sql7=mysql_query("UPDATE demande_consommable SET statut='T',dateS=NOW(),magazigner='$magazigner' WHERE IDdemande='$idD'");
         //historique
-        $msg2="a saisie la sortie de <b> ".$QTY." </b> du cosommable ayant l'ID <b>".$CONS."</b> , Demande ID <b>".$idD."</b>";
+        $msg2=" has signed the output of <b> ".$QTY." </b> of consumable having the ID <b>".$CONS."</b> , Request ID <b>".$idD."</b>";
         $HIS=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','$msg2','sortie consommable','$idD',NOW())");
     }
 }
 //Notification
-$msg= " ".$magazigner."  a accépté votre demande de consommable N°   ".$idD."";
+$msg= " ".$magazigner." has accepted your request for consumable N °   ".$idD."";
 $sql4=mysql_query("INSERT INTO notification(emetteur, destinataire, message, dateN,chemin) VALUES ('$magazigner','CONS','$msg',NOW(),'confirmation_recep_cons.php')");
 header('Location: ../pages/sortie_consommable.php?status=sent');
 ?>

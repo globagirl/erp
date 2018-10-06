@@ -6,7 +6,6 @@ if( !isset($_SESSION["role"]) ){
 }else{
     $role=$_SESSION['role'];
     $userID=$_SESSION['userID'];
-
 }
 ?>
 <html>
@@ -55,7 +54,7 @@ if( !isset($_SESSION["role"]) ){
         function choixListe(p,z) {
             $(z).val(p);
         }
-        ////////////////////////////////////FIN///////////////
+        /////////////////FIN///////////////
         ///////ajout component
         function addA(){
             var TRF="#TR"+i;
@@ -64,7 +63,7 @@ if( !isset($_SESSION["role"]) ){
             var C="C"+i;
             var Q="Q"+i;
             var listeC="listeC"+i;
-            $(TRF).after('<div class="col-lg-12" id='+T+'><div class="form-group well"><label>Composant '+i+'</label><div class="form-inline"><input type="text" size="20" name='+C+' id='+C+'placeholder="Code composant" class="form-control" onKeyup=autoComplete("'+C+'","'+listeC+'") onFocus=autoComplete("'+C+'","'+listeC+'")  onBlur=hideListe("'+listeC+'")><input type="text" size="4" name='+Q+' id='+Q+' class="form-control" placeholder="QTY"></div><div class="divAuto"><ul id='+listeC+' ></ul></div></div> </div>');
+            $(TRF).after('<div class="col-lg-12" id='+T+'><div class="form-group well"><label>Component '+i+'</label><div class="form-inline"><input type="text" size="20" name='+C+' id='+C+'placeholder="Code composant" class="form-control" onKeyup=autoComplete("'+C+'","'+listeC+'") onFocus=autoComplete("'+C+'","'+listeC+'")  onBlur=hideListe("'+listeC+'")><input type="text" size="4" name='+Q+' id='+Q+' class="form-control" placeholder="QTY"></div><div class="divAuto"><ul id='+listeC+' ></ul></div></div> </div>');
             document.getElementById('nbr').value=i;
         }
         /////delete zone
@@ -164,12 +163,12 @@ if( !isset($_SESSION["role"]) ){
                 alert("PLZ Enter the Product Length !!");
 
             }else if(poids==0 || poids==""){
-                alert("Donnez le poids en Kg par métre   SVP !!");
+                alert("PLZ give the weight in Kg per meter !!");
 
             } else if(rev=="" || Drev==""){
-                alert("Vérifier vos révisions SVP !!");
+                alert("PLZ Check your revisions!!");
             } else  if(prixU==0 || prixU==""){
-                alert("Vérifier le prix unitaire   SVP !!");
+                alert("Check the unit price please !!");
 
             } else {
                 document.getElementById('nbr').value=i;
@@ -178,10 +177,7 @@ if( !isset($_SESSION["role"]) ){
         }
     </script>
 </head>
-
 <body>
-
-
 <div id="entete">
     <div id="logo">
     </div>
@@ -191,7 +187,6 @@ if( !isset($_SESSION["role"]) ){
         ?>
     </div>
 </div>
-
 <div id="main">
     <div id="menu">
         <?php
@@ -212,23 +207,23 @@ if( !isset($_SESSION["role"]) ){
             <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Produit </h1>
+                        <h1 class="page-header">Product </h1>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12" >
                         <div class="panel panel-default">
-                            <div class="panel-heading">Ajout nouveau produit </div>
+                            <div class="panel-heading">Add new product </div>
                             <div class="panel-body" >
                                 <form method="post"  id="form1" name="form1" action="../php/ajout_produit.php">
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label>Famille produit </label>
+                                                <label>Product Family</label>
                                                 <input type="text" name="produit" id="produit" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label>Code produit </label>
+                                                <label>Product Code</label>
                                                 <input type="text" name="code_produit" id="code_produit" class="form-control" onblur="verif_produit()">
                                             </div>
                                             <div class="form-group">
@@ -236,34 +231,34 @@ if( !isset($_SESSION["role"]) ){
                                                 <textarea name="desc" id="desc" class="form-control"> </textarea>
                                             </div>
                                             <div class="form-group">
-                                                <label>Catégorie </label>
+                                                <label>Category </label>
                                                 <select type="text" name="cat" id="cat" class="form-control" OnFocus="catListe();">
-                                                    <option value="s">Sélectionnez..</option>
+                                                    <option value="s">Select...</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label>Longueur</label>
+                                                <label>Length</label>
                                                 <div class="form-inline">
-                                                    <input type="text" name="long" id="long" class="form-control" placeholder="Longueur" onBlur="verifierL();">
-                                                    <input type="text" name="tlots" id="tlots" class="form-control" placeholder="Taille du lot">
+                                                    <input type="text" name="long" id="long" class="form-control" placeholder="Length" onBlur="verifierL();">
+                                                    <input type="text" name="tlots" id="tlots" class="form-control" placeholder="Lot size">
                                                     <input type="text" name="nbr_box" id="nbr_box" class="form-control" placeholder="Nbr cable par box">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Poids du cable </label>
-                                                <input type="text" name="poids" id="poids" class="form-control" placeholder="Poids en KG par métre">
+                                                <label>Cable weight</label>
+                                                <input type="text" name="poids" id="poids" class="form-control" placeholder="Weight in KG per meter">
                                             </div>
                                             <div class="form-group">
-                                                <label>Révision</label>
+                                                <label>Revision</label>
                                                 <div class="form-inline">
-                                                    <input type="text" name="rev" id="rev" class="form-control" placeholder="Révision">
+                                                    <input type="text" name="rev" id="rev" class="form-control" placeholder="Revision">
                                                     <input type="text" name="Drev" id="Drev" class="form-control" placeholder="Draw revision">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Prix unitaire</label>
+                                                <label>Unit Price</label>
                                                 <div class="form-inline">
                                                     <input type="text" name="prixU" id="prixU" class="form-control">
                                                     <select type="text" name="devise" id="devise" class="form-control" onclick="catListe();">
@@ -278,9 +273,9 @@ if( !isset($_SESSION["role"]) ){
                                     <div class="row">
                                         <div class="col-lg-12 " id="TR1" >
                                             <div class="form-group well">
-                                                <label>Composant 1</label>
+                                                <label>Component 1</label>
                                                 <div class="form-inline">
-                                                    <input type="text" name="C1" id="C1" class="form-control" placeholder="Code composant"  onKeyup="autoComplete('C1','listeC1');" onFocus="autoComplete('C1','listeC1')"  onBlur="hideListe('listeC1');">
+                                                    <input type="text" name="C1" id="C1" class="form-control" placeholder="Component Code"  onKeyup="autoComplete('C1','listeC1');" onFocus="autoComplete('C1','listeC1')"  onBlur="hideListe('listeC1');">
                                                     <input type="text" name="Q1" id="Q1" class="form-control" placeholder="QTY">
                                                     <input type="button" onclick="addA()" class="btn btn-success" value="+">
                                                     <input type="button" onclick="deleteA();" class="btn btn-danger" value="-">
@@ -291,11 +286,10 @@ if( !isset($_SESSION["role"]) ){
                                         </div>
                                         <div class="col-lg-12" >
                                             <div class="form-group">
-                                                <input type="button" OnClick="verifier();" class="btn btn-primary" value="Ajouter >> ">
+                                                <input type="button" OnClick="verifier();" class="btn btn-primary" value="Add >> ">
                                             </div>
                                         </div>
                                     </div>
-
                                 </form>
                             </div>
                         </div>

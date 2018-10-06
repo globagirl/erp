@@ -152,16 +152,16 @@ $pdf->Cell(80,8,'Produit : '.$produit,1,false,'C','R');
 $pdf->Cell(0,8,'UPC : '.$UPC,1,false,'C','R');
 $pdf->ln();
 $pdf->SetFont('Times','',12);
-$pdf->Cell(60,8,'Quantite: '.$row['qte_p'],1,0,'C');
+$pdf->Cell(60,8,'Quantité: '.$row['qte_p'],1,0,'C');
 
 $pdf->Cell(60,8,'Nbr Plans: '.$row0['nbr_plan'],1,0,'C');
-$pdf->Cell(0,8,'Revision : '.$r['revision'],1,0,'C');
+$pdf->Cell(0,8,'Révision : '.$r['revision'],1,0,'C');
 
 $pdf->ln();
 
 $pdf->Cell(60,8,'Date Lancement: '.$row0['date_lance'],1,0,'C');
 $pdf->Cell(60,8,'Date d\'echéance : '.$row0['date_exped_conf'],1,0,'C');
-$pdf->Cell(0,8,'Quantité total : '.$row0['qte'],1,0,'C');
+$pdf->Cell(0,8,'Quantité totale : '.$row0['qte'],1,0,'C');
 
 
 
@@ -197,6 +197,11 @@ elseif ($r['categorie']==("UPM3"))
 { 
   
 		$image_file = 'img/upm3.jpg';
+
+}
+else if ($row1['categorie']==("PLUX FG"))
+{
+    $image_file = 'img/c1.jpg';
 
 }
 elseif (($r['categorie']=="PCB") or ($r['categorie']=="Others"))

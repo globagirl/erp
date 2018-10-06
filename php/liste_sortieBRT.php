@@ -12,7 +12,7 @@ while($data=mysql_fetch_array($sql)){
             <label>OF : </label>
             <input type="text"  class="form-control" value='.$OF.' READONLY> 
             
-            <label>Produit : </label>
+            <label>Product : </label>
             <input type="text" class="form-control" value='.$produit.' READONLY> 
             </div>
             <hr>';
@@ -53,7 +53,7 @@ while($data=mysql_fetch_array($sql)){
         }
     }
 }
-echo '<div class="well"><input type="button" onClick="verifier();" class="btn btn-primary" Value="Envoyer >>">
+echo '<div class="well"><input type="button" onClick="verifier();" class="btn btn-primary" Value="Submit >>">
 <input type="text"  name="nbr" id="nbr" value='.$x.' style="visibility:hidden"> </div>';
 /*
 }else{

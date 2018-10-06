@@ -41,7 +41,7 @@ for($i=0; $i<count($fichier['name']); $i++){
     if(move_uploaded_file($fichier1,$destination)){
         $sql1=mysql_query("INSERT INTO invoice_files(nameF, typeF, sizeF, upDateF, dataF,IDinvoice) VALUES ('$fichierName','$typeF','$taille',NOW(),'$destination','$IDinvoice')");
     }else{
-        echo("Contactez le responsable Systéme SVP !!");
+        echo("PLZ Contact the System Manager !!");
     }
 }
 //////FIN///////
@@ -77,7 +77,7 @@ while($j<$nbrJ){
                 die('Error: ' . mysql_error());
             }else{
                 //historique
-                $msg= "  a crée la facture  N°   ".$IDinvoice."";
+                $msg= " has created the invoice N°   ".$IDinvoice."";
                 $HIS=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','$msg','Invoice','$IDinvoice',NOW())");
                 //Update reception
                 $sqlU=mysql_query("UPDATE reception_items SET  status='invoiced' where idRI='$idRI'");

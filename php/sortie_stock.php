@@ -41,7 +41,7 @@ while($nbr>$i){
 	$sql3=mysql_query("UPDATE paquet2 SET qte_res='$qtePaqR' where IDpaquet='$vP'");
 	$sql4=mysql_query("UPDATE article1 SET stock= stock-'$vQ' where code_article='$vA'");
 	//historique
-	  $msg=" a saisie la sortie de <b> ".$vQ." </b> du paquet N°  <b>".$vP."</b>";
+	  $msg=" has signed the output of <b> ".$vQ." </b> from the package N°  <b>".$vP."</b>";
 	$HIS=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','$msg','sortie_stock1/paquet','$vP',NOW())");
 }
      mysql_close();

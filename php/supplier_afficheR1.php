@@ -13,7 +13,7 @@ echo("<table>
 				<option value=\"USD\">USD</option>
 			</select>
 	    </span>
-		<input  type=\"text\" id=\"coursTND\" name=\"coursTND\"  placeholder=\"Cours TND\" size=\"10 \" > 
+		<input  type=\"text\" id=\"coursTND\" name=\"coursTND\"  placeholder=\"Currency TND\" size=\"10 \" > 
     </td>
 	<td style=\"text-align:center\">
 	   <b> Invoice date : </b><input type=\"date\" name=\"dateF\" id=\"dateF\"  >
@@ -34,9 +34,9 @@ echo("<table>
 	<span class=\"custom-dropdown custom-dropdown--white custom-dropdown--small\" >
 	 <select id=\"modeP1\" name=\"modeP1\" onChange=\"afficheMP('".$i."');\" class=\"custom-dropdown__select custom-dropdown__select--white\"  disabled>	    
 	    <option value=\"Cache\">Cache</option>
-	    <option value=\"Cheque\">Par chéque</option>
-	    <option value=\"Virement\">Virement</option>
-	    <option value=\"Autre\">Autre..</option>	 
+	    <option value=\"Cheque\">Check</option>
+	    <option value=\"Virement\">Bank Transfer</option>
+	    <option value=\"Autre\">Other..</option>	 
    </select> 
    </span>
     </td>

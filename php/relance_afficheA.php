@@ -4,7 +4,7 @@ $qty=$_POST['qty'];
 include('../connexion/connexionDB.php');
 $sql = mysql_query("SELECT * FROM commande_items where POitem='$PO'");
 if(mysql_num_rows($sql)<1){
-    echo("<td colspan='2'>PO N° ".$PO." introuvable !!</td>");
+    echo("<td colspan='2'>PO N° ".$PO." Not Found !!</td>");
 }else{
     $data1=mysql_fetch_array($sql);
     $produit=$data1['produit'];

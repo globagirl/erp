@@ -19,10 +19,10 @@ while($nbr>$i){
     }
     $sql3=mysql_query("select etat from personnel_info where matricule='$mat'");
     $etat=mysql_result($sql3);
-//    if($etat=="actif")
-//    {
+    if($etat=="actif")
+    {
         $sql = mysql_query("INSERT INTO personnel_avance(matricule, dateA,montant)VALUES ('$mat','$dateA','$montant')");
-//    }
+    }
 //    else{
 //        echo"<script> alert('NOT ACTIF!'); </script>";
 //        header('Location: ../pages/ajout_avance.php?status=Fail');
@@ -30,4 +30,5 @@ while($nbr>$i){
 }
 ///////////FIN///////
 header('Location: ../pages/ajout_avance.php?status=sent');
+
 ?>

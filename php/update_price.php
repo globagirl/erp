@@ -27,7 +27,7 @@ if($cl_four=="client"){
 ('$idH','$valeur','$item','$priceA','$price',NOW(),'$userID','$note','$etat')");
         header('Location: ../pages/update_price.php');
     }else{
-        echo "Contaclez l'administrateur systéme SVP !! ";
+        echo "PLZ Contact the system administrator !! ";
     }
 }else{
     $sq=mysql_query("select prix from article1 where code_article='$item'");
@@ -48,7 +48,7 @@ if($cl_four=="client"){
 ('$idH','$valeur','$item','$priceA','$price',NOW(),'$userID','$note','$etat')");
         header('Location: ../pages/update_price.php');
     }else{
-        echo "Contaclez l'administrateur systéme SVP !! ";
+        echo "PLZ Contact the system administrator !! ";
     }
 }
 ?>

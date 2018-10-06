@@ -14,7 +14,7 @@ $valeur=@$_POST['valeur'];
 $noteUpdate=$_POST['note'];
 $nom=$_SESSION['userName'];
 $userID=$_SESSION['userID'];
-$note="Vérifier votre extension de fichier SVP !!";
+$note="Check your file extension PLZ !!";
 //File
 $fichier = basename($_FILES['fileP']['name']);
 $extension = strrchr($_FILES['fileP']['name'], '.');
@@ -36,7 +36,7 @@ if($extension==".xlsx"){
                 $prixA=@mysql_result($sq,0);
                 $epsilon = 0.00001;
                 if(abs($prixA - $prixU) < $epsilon){
-                    $note=$note."<br> le prix du  produit ".$PN." n'a pas  été mis a jour. ";
+                    $note=$note."<br> The product price : ".$PN." hasn't been updated. ";
                 }else{
                     $x=rand(1,999);
                     $y=rand(8,989);
@@ -46,10 +46,10 @@ if($extension==".xlsx"){
                     $sql3=mysql_query("INSERT INTO update_prices_product(ID, client, item, ancien_prix, nouveau_prix, dateM, operateur, description) VALUES
                   ('$idH','$valeur','$PN','$prixA','$prixU',NOW(),'$userID','$noteUpdate')");
                     $sql2=mysql_query("UPDATE commande_items SET prixU='$prixU'  WHERE produit='$PN' and statut != 'closed'");
-                    $note=$note."<br><b> le prix du  produit ".$PN." a été mis a jour veillez vérifier le prix SVP</b> ";
+                    $note=$note."<br><b> The product price : ".$PN." has been updated, check price PLZ</b> ";
                 }
             }else{
-                $note=$note."<br>Produit ".$PN." n'existe pas'. ";
+                $note=$note."<br> The Product ".$PN." doesn't exist. ";
             }
         }else{
             $sq=mysql_query("select prix from article1 where code_article='$PN'");
@@ -65,7 +65,7 @@ if($extension==".xlsx"){
                 $sql3=mysql_query("INSERT INTO update_prices_item(ID, four, item, ancien_prix, nouveau_prix, dateM, operateur, description) 
                 VALUES ('$idH','$valeur','$PN','$priceA','$prixU',NOW(),'$userID','$noteUpdate')");
             }else{
-                $note=$note."<br>Article ".$PN." n'existe pas'. ";
+                $note=$note."<br>Article ".$PN." doesn't exist. ";
             }
         }
     }
@@ -76,6 +76,6 @@ if($note == ""){
     header('Location: ../pages/update_price.php?status=sent');
     //echo "OK";
 }else{
-    echo('<p>'.$note.'</p><br><a href="../pages/update_price.php">retour >></a>');
+    echo('<p>'.$note.'</p><br><a href="../pages/update_price.php">>>RETURN</a>');
 }
 ?>

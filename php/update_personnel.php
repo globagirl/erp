@@ -38,7 +38,7 @@ if(!file_exists($_FILES['fileP']['tmp_name'])){
     if(move_uploaded_file($fichier1P,$destinationP)){
         $sql = "UPDATE personnel_info SET NCIN='$ncin',nom='$nom',mail='$mail',contrat='$contrat',category='$cat',dateN='$dateN',adresse1='$ad1',adresse2='$ad2',salaire='$salaire',salaireI='$salaireI',imgP='$destinationP' WHERE matricule='$mat'";
     }else{
-        echo("Contactez le responsable Systéme SVP !!");
+        echo("PLZ Contact the System Manager !!");
     }
 }
 if (!mysql_query($sql)) {
@@ -122,12 +122,12 @@ if (!mysql_query($sql)) {
         if(move_uploaded_file($fichier1,$destination)){
             $sql1=mysql_query("INSERT INTO personnel_cv(name_F,upDateF, dataF,matricule) VALUES ('$fichierName',NOW(),'$destination','$mat')");
         }else{
-            echo("Contactez le responsable Systéme SVP !!");
+            echo("PLZ Contact the System Manager !!");
         }
     }
 ///////////FIN///////	
     $userid=$_SESSION['userID'];
-    $msg="a modifié les cordonnées du personnel ayant le matricule: <b>".$mat."</b>";
+    $msg="has changed the contact information of the Employee : <b>".$mat."</b>";
     $His=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$userid','$msg','personnel_info','$mat',NOW())");
     header('Location: ../pages/consult_personnel.php?status=sent');
 }

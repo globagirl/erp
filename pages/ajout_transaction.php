@@ -25,7 +25,7 @@ if( !isset($_SESSION["role"]) ){
     <link href="../theme/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script type='text/javascript' src='../include/scripts/consult_transaction_compte.js'></script>
     <title>
-        Ajout transaction
+        Add Transaction
     </title>
     <script>
         var v=1;
@@ -40,7 +40,7 @@ if( !isset($_SESSION["role"]) ){
                     url: '../php/verif_cheque.php',
                     success: function(data) {
                         if(data=="1"){
-                            bootbox.alert("Ce chéque existe déja !!");
+                            bootbox.alert("This check exists already !!");
                             v=0;
                         }else{
                             v=1;
@@ -59,30 +59,28 @@ if( !isset($_SESSION["role"]) ){
             var desc=document.getElementById("DESC").value;
             var montant=document.getElementById("montant").value;
             var catT=document.getElementById("catT").value;
-
             if(dateT==""){
-                bootbox.alert("Donnez la date de la transaction SVP!!");
+                bootbox.alert("PLZ enter the transaction date!!");
             }else if(compte=="S"){
-                bootbox.alert("Donner l'identifiant du compte bancaire SVP !!");
+                bootbox.alert("PLZ enter the bank account identifier!!");
             }else if((document.getElementById("actT1").checked==false)&& (document.getElementById("actT2").checked==false)){
-                bootbox.alert("Sélection le type d'action SVP!!");
+                bootbox.alert("PLZ select action's type!!");
             }else if(modeT=="S"){
-                bootbox.alert("Selectionnez le mode de transaction SVP !!");
+                bootbox.alert("PLZ select the transaction Mode!!");
 
             }else if((REF=="") && (modeT != "AGIO")){
-                bootbox.alert("Donnez la réference SVP !!");
+                bootbox.alert("PLZ enter the reference  !!");
             }else if(catT == "s"){
-                bootbox.alert("Donnez la catégorie SVP !!");
+                bootbox.alert("PLZ enter Category !!");
             }else if(desc==""){
-                bootbox.alert("Donnez une description pour la transaction SVP !!");
+                bootbox.alert("PLZ enter description of the transaction !!");
             }else if(montant==""){
-                bootbox.alert("Donnez le montant SVP !!");
+                bootbox.alert("PLZ enter the amount !!");
             }else if((etat=="S") && (modeT == "CHQ")){
-                bootbox.alert("Donnez l'état du chéque SVP !!");
+                bootbox.alert("Give the state of the check please!!");
             }else if(v == 0){
-                bootbox.alert("N° de chéque existe déja !!");
+                bootbox.alert("Check N° exist already !!");
             }else {
-
                 //document.forms['formD'].submit();
                 if(modeT != "AGIO"){
                     var etat=document.getElementById("etat").value;
@@ -110,14 +108,10 @@ if( !isset($_SESSION["role"]) ){
                         document.getElementById("montant").value="";
                         document.getElementById("actT1").checked=false;
                         document.getElementById("actT2").checked=false;
-
                     }});
-
                 //alert("OK");
             }
-
         }
-
         function etatActive(){
             var modeT=document.getElementById("modeT").value;
             if(modeT!="AGIO"){
@@ -126,7 +120,6 @@ if( !isset($_SESSION["role"]) ){
                 document.getElementById('etat').disabled=true;
             }
         }
-
         ///Afficher la liste des catégories
         function afficheCat(){
             if(document.getElementById("actT1").checked==true){
@@ -147,14 +140,9 @@ if( !isset($_SESSION["role"]) ){
                 });
             }
         }
-
     </script>
 </head>
-
 <body>
-
-
-
 <div id="entete">
     <div id="logo">
     </div>
@@ -164,11 +152,9 @@ if( !isset($_SESSION["role"]) ){
         ?>
     </div>
 </div>
-
 <div id="main">
     <div id="menu">
         <?php
-
         if($role=="ADM"){
             include('../menu/menuAdmin.php');
         }else if($role=="DIR"){
@@ -180,7 +166,6 @@ if( !isset($_SESSION["role"]) ){
         }else{
             header('Location: ../deny.php');
         }
-
         ?>
     </div>
     <div id='contenu'>
@@ -192,42 +177,37 @@ if( !isset($_SESSION["role"]) ){
                     </div>
                     <!-- /.col-md-12 -->
                 </div>
-
-
-
                 <div class="row">
                     <div class="col-md-12" >
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                Ajout transaction
+                                Add transaction
                             </div>
                             <div class="panel-body" >
-
                                 <form role="form" method="post" name="formD" id="formD" action="../php/ajout_transaction.php" >
                                     <div class="col-md-4">
                                         <!--<div class="col-md-6">-->
                                         <div class="form-group ">
-                                            <label>Date transaction</label>
+                                            <label>Transaction Date </label>
                                             <input type="date" class="form-control" placeholder="aaaa-mm-jj" name="dateT" id="dateT">
 
                                         </div>
                                         <div class="form-group" >
-                                            <label>Compte</label>
+                                            <label>Bank Account </label>
                                             <select class="form-control" id="compte" name="compte">
                                                 <?php
                                                 $q2 = mysql_query("SELECT * FROM compte_banque");
-                                                echo '<option value="S">Selectionnez...</option>';
+                                                echo '<option value="S">Select...</option>';
                                                 while($data2=mysql_fetch_array($q2)) {
                                                     echo '<option value="'.$data2["REFcompte"].'">'.$data2["REFcompte"].'</option>';
                                                 }
                                                 ?>
                                             </select>
                                         </div>
-
                                         <div class="form-group">
                                             <div class="radio-inline">
                                                 <label>
-                                                    <input type="radio" name="typeT" id="actT1" value="RT" onClick="afficheCat();">Retrait
+                                                    <input type="radio" name="typeT" id="actT1" value="RT" onClick="afficheCat();">Withdrawal
                                                 </label>
                                             </div>
                                             <div class="radio-inline">
@@ -236,15 +216,12 @@ if( !isset($_SESSION["role"]) ){
                                                 </label>
                                             </div>
                                         </div>
-
-
-
                                         <div class="form-group">
                                             <div class="form-inline">
                                                 <select class="form-control" id="modeT" name="modeT" onChange="etatActive();">
                                                     <option value="S">Mode ...</option>
-                                                    <option value="VIR">Virement</option>
-                                                    <option value="CHQ">Chéque</option>
+                                                    <option value="VIR">Transfer</option>
+                                                    <option value="CHQ">Check</option>
                                                     <option value="AGIO">AGIOS</option>
                                                 </select>
                                                 <input type="text" class="form-control"  placeholder="Reference" name="REF" id="REF" onBlur="verif_cheque();">
@@ -257,25 +234,22 @@ if( !isset($_SESSION["role"]) ){
                                         <div class="form-group">
                                             <select class="form-control" id="catT" name="catT" onFocus="afficheCat();">
                                             </select>
-
-
                                         </div>
-
                                         <div class="form-group">
                                             <textarea class="form-control"  placeholder="Description" name="DESC" id="DESC"></textarea>
                                         </div>
                                         <div class="form-group">
                                             <div class="form-inline">
-                                                <input type="text" class="form-control"  placeholder="Montant .." name="montant" id="montant">
+                                                <input type="text" class="form-control"  placeholder="Amount .." name="montant" id="montant">
                                                 <select class="form-control" id="etat" name="etat" Disabled>
-                                                    <option value="AT">En attente</option>
-                                                    <option value="R">Retiré</option>
-                                                    <option value="AN">Annulé</option>
+                                                    <option value="AT">Waiting</option>
+                                                    <option value="R">Withdraw</option>
+                                                    <option value="AN">Canceled</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="button" onClick="verif();" class="btn btn-default blue" Value="Ajouter >> ">
+                                            <input type="button" onClick="verif();" class="btn btn-default blue" Value="Add >> ">
                                             <!--<input type="button" onClick="verif_cheque();" class="btn btn-default blue" Value="Ajouter >> ">-->
                                         </div>
                                         <!--</div>-->
@@ -295,9 +269,7 @@ if( !isset($_SESSION["role"]) ){
                         </div>
                     </div>
                 </div><!-- fin row -->
-
             </div>
             <?php mysql_close(); ?>
 </body>
-
 </html>

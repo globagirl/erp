@@ -45,7 +45,7 @@
                         </ul></li>
                     <li><div class="buttonbg gradient_button gradient30" style="width: 96px;"><div class="arrow"><a>Operative</a></div></div>
                         <ul>
-                            <li class="first_item"><a href="ajout_ouvr.php">Ajdd Operative</a></li>
+                            <li class="first_item"><a href="ajout_ouvr.php">Add Operative</a></li>
                             <li><a href="grh_consult_ouvr.php">Consult Operative</a></li>
                             <li class="last_item"><a href="grh_supp_ouvr.php">Delete Operative</a></li>
                         </ul></li>

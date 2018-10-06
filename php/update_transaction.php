@@ -23,6 +23,6 @@ if($typeT == 'RT'){	  //retrait
         $sql3=mysql_query("UPDATE compte_banque SET soldeR=soldeR+'$montant' WHERE REFcompte='$compte'");
     }
 }
-$msg="a modifié la transaction N° <b>".$IDtrans."</b> , ancien montant ".$montantA;
+$msg=" has changed the transaction N° <b>".$IDtrans."</b> , Old Amount ".$montantA;
 $His=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$userID','$msg','update_transaction','$IDtrans',NOW())");
 ?>

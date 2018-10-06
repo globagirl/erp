@@ -46,7 +46,7 @@ if(mysql_num_rows($req1)>0){
             </tr>
 			<tr><th style="width:100%;height:40px" class="degraD">
 			<center><input type="text" id="STOCKart" value="'.$stockART.'"size="10"READONLY><input type="button" value="+" onClick="addStock()">
-			   <input type="button" value="Réel" onClick="realStock()"></center></th>
+			   <input type="button" value="Real" onClick="realStock()"></center></th>
 			</tr>
 			<tr>
                <th style="width:32%;height:30px" class="degraD">IN</th>

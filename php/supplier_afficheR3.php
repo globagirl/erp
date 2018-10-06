@@ -4,7 +4,7 @@ include('../connexion/connexionDB.php');
 $i=1;
 echo("<div id=\"divAdd\"><table><tr>
 <td><center><b> Invoice N°: </b><input type=\"text\" placeholder=\"Invoice N°\" name=\"inv1\" id=\"inv1\" onBlur=verif_invoice2('inv1')></center></td>
-<td><b>Date facturation : </b><input  type=\"date\" name=\"dateF1\" ></td>
+<td><b>Billing Date : </b><input  type=\"date\" name=\"dateF1\" ></td>
 <td><b>Amount : </b>
 <input  type=\"text\" id=\"total1\" name=\"total1\"  size=\"15 \" > 
  <span class=\"custom-dropdown custom-dropdown--white custom-dropdown--small\">
@@ -14,18 +14,18 @@ echo("<div id=\"divAdd\"><table><tr>
 				<option value=\"USD\">USD</option>		
 			</select>
 	 </span>
-	 <input  type=\"text\" id=\"coursTND1\" name=\"coursTND1\"  placeholder=\"Cours TND\" size=\"10 \" > 
+	 <input  type=\"text\" id=\"coursTND1\" name=\"coursTND1\"  placeholder=\"Currency TND\" size=\"10 \" > 
 	 </td>
 	 </tr>
 	 <tr>
 	 <td><center> <b>Paid  </b> <input type=\"checkbox\" name=\"paid1\" id=\"paid1\" value=\"oui\" onClick=\"activeMP('".$i."');\"></center></td>
-	 <td><b>Date payement : </b><input type=\"date\" name=\"dateP1\" id=\"dateP1\"></td><td>
+	 <td><b>Payment Date : </b><input type=\"date\" name=\"dateP1\" id=\"dateP1\"></td><td>
 	  <span class=\"custom-dropdown custom-dropdown--white custom-dropdown--small\" >
 	 <select id=\"modeP1\" name=\"modeP1\" onChange=\"afficheMP('".$i."');\" class=\"custom-dropdown__select custom-dropdown__select--white\"  disabled>	    
 	    <option value=\"Cache\">Cache</option>
-	    <option value=\"Cheque\">Par chéque</option>
-	    <option value=\"Virement\">Virement</option>
-	    <option value=\"Autre\">Autre..</option>	 
+	    <option value=\"Cheque\">Check</option>
+	    <option value=\"Virement\">Bank transfer</option>
+	    <option value=\"Autre\">Other..</option>	 
    </select> 
    </span>
 	 </td>

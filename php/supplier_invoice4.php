@@ -39,7 +39,7 @@ for($i=0; $i<count($fichier['name']); $i++) {
     if(move_uploaded_file($fichier1,$destination)){
         $sql1=mysql_query("INSERT INTO invoice_files(nameF, typeF, sizeF, upDateF, dataF,IDinvoice) VALUES ('$fichierName','$typeF','$taille',NOW(),'$destination','$IDinvoice')");
     }else{
-        echo("Contactez le responsable Systéme SVP !!");
+        echo("PLZ contact the system Manager !!");
     }
     if(isset($_POST['paid1'])){//si la facture est déja payé
         $modePay=$_POST['modeP1'];
@@ -74,7 +74,7 @@ for($i=0; $i<count($fichier['name']); $i++) {
 }
 /// FIN///////
 //historique
-$msg= "  a crée la facture  N°   ".$IDinvoice."";
+$msg= "  has created the invoice N°   ".$IDinvoice."";
 $HIS=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','$msg','Invoice','$IDinvoice',NOW())");
 //
 mysql_close();

@@ -17,7 +17,7 @@ stripping_missing='$strip_miss',length_of_stripping='$strip_length',position_of_
 wire_seal_aspect='$ws_aspect',contact_aspect='$contact_aspect',other='$other' WHERE id_cri='$id'";
 if (!mysql_query($sql)) {
     die('Error: ' . mysql_error());
-    echo '<SCRIPT LANGUAGE="JavaScript">alert(\'Erreur de connexion à la base de données\');</SCRIPT>';
+    echo '<SCRIPT LANGUAGE="JavaScript">alert(\'Database error: Error connecting to database!\');</SCRIPT>';
 }else{
     unset($_SESSION['IDupmCRI']);
     //  echo '<SCRIPT LANGUAGE="JavaScript">alert(\'Terminé avec Succèes\');</SCRIPT>';

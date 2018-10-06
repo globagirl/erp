@@ -27,13 +27,13 @@ if($extension==".xlsx"){
         $prd=mysql_result($sql,0);
         $sql1="UPDATE produit1 SET draw_rev='$rev' where produit ='$prd'";
         if (!mysql_query($sql1)) {
-            $note=$note."<br>Non inséré :".$prd;
+            $note=$note."<br>Not inserted :".$prd;
         }
     }
     if($note == ""){
         header('Location: ../pages/excel_to_sql.php?status=sent');
     }else{
-        echo('<p>'.$note.'</p><br><a href="../pages/excel_to_sql.php">retour >></a>');
+        echo('<p>'.$note.'</p><br><a href="../pages/excel_to_sql.php">>>Return </a>');
     }
 }else{
     header('Location: ../pages/excel_to_sql.php?status=fail');

@@ -33,7 +33,7 @@ if (!mysql_query($sql)) {
     }
     //historique
     $userid=$_SESSION['userID'];
-    $msg="a modifié l'ordre d'achat N° <b>".$ord1."</b>";
+    $msg="has modified the purchase order N° <b>".$ord1."</b>";
     $His=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$userid','$msg','ordre_achat2','$ord1',NOW())");
     header('Location: ../pages/update_ordre_achat.php?status=sent');
 }

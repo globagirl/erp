@@ -1,6 +1,6 @@
 <?php
     include('../connexion/connexionDB.php');
-	echo "<h1>Sélection des delai des calibration </h1>";
+	echo "<h1>Select calibration delay </h1>";
 	$sql=mysql_query("SELECT * FROM materiel");
     while($data=mysql_fetch_array($sql)){
         $IDmat=$data['IDmat'];

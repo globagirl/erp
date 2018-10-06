@@ -73,7 +73,7 @@ while($x<$nbr){
         if(move_uploaded_file($fichier1,$destination)){
             $sql1=mysql_query("INSERT INTO invoice_files(nameF, typeF, sizeF, upDateF, dataF,IDinvoice) VALUES ('$fichierName','$typeF','$taille',NOW(),'$destination','$IDinvoice')");
         }else{
-            echo("Contactez le responsable Systéme SVP !!");
+            echo("PLZ Contact the System Manager !!");
         }
     }
 //////FIN///////

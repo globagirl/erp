@@ -12,10 +12,10 @@ if(mysql_num_rows($sql)>0){
     /*$sql2 = mysql_query("SELECT sum(nbr_defaut) FROM plan1 where OF='$OF'");
     $nbr_defaut=@mysql_result($sql2,0);*/
     $x=0;
-    echo '<hr><h4>Code produit : '.$produit.'</h4><hr>
+    echo '<hr><h4>Product Code : '.$produit.'</h4><hr>
 
    <div class="form-group form-inline">
-     <label>Total défauts: </label>
+     <label>Total defects: </label>
      <input type="text"  name="nbrP" id="nbrP" class="form-control" required="required"> 
      </div>
 	<hr>';
@@ -34,7 +34,7 @@ if(mysql_num_rows($sql)>0){
         <p class=\"help-block\">".$desc."</p>
         </div>";
     }
-    echo '<div class="well"><input type="submit" class="btn btn-primary" Value="Envoyer >>">
+    echo '<div class="well"><input type="submit" class="btn btn-primary" Value="Submit >>">
 <input type="text"  name="nbr" value='.$x.' style="visibility:hidden"> </div>';
 }else{
     echo '1';

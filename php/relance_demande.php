@@ -27,7 +27,7 @@ if (!mysql_query($sql)) {
 	VALUES ('$IDR','$v1','$v2')");
 
     }
-    $msg= " ".$demandeur."  a déclaré une nouvelle demande de relance <br> Demande ID :  ".$IDR."";
+    $msg= " ".$demandeur." has declared a new replacement request <br> Request ID :  ".$IDR."";
     $sql4=mysql_query("INSERT INTO notification(emetteur, destinataire, message, dateN,chemin) VALUES ('$demandeur','LOG','$msg',NOW(),'relance_confirmation1.php')");
     $His=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','add','demande relance','$IDR',NOW())");
     header('Location: ../pages/relance_demande.php?status=sent');

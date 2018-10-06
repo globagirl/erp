@@ -4,7 +4,7 @@ $dateJ=date("Y-m-d");
 $dateJ=strtotime($dateJ."+7 days");
 $dateJ=date('Y-m-d',$dateJ);
 echo'
-    <h3>Liste des commandes NON expédié </h3>
+    <h3>List of orders NOT shipped</h3>
     <table class="table table-fixed  tabScroll2">
     <thead style="width:100%"><tr>
     <th style="width:24.6%;height:60px">PO</th>

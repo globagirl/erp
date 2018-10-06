@@ -20,7 +20,7 @@ if($etat == 'R'){
     }
 }
 $sql3=mysql_query("DELETE FROM transaction_compte WHERE  IDtrans='$IDtrans'");
-$msg=" a supprimé un ".$modeT."  N° <b>".$ref."</b> Montant ".$montant;
+$msg=" has deleted the ".$modeT."  N° <b>".$ref."</b> Amount ".$montant;
 $His=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$userID','$msg','transactionDelete','$IDtrans',NOW())");
 mysql_close();
 ?>

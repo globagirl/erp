@@ -19,7 +19,7 @@ if($typeT == 'RT'){
     $sql1=mysql_query("UPDATE transaction_compte SET etat='AN' WHERE IDtrans='$IDtrans' ");
     //$sql4=mysql_query("UPDATE compte_banque SET soldeR=soldeR-'$montant' WHERE  REFcompte='$compte'");
 }
-$msg="a annule  la transaction ayant la reference <b>".$ref."</b>";
+$msg=" has canceled the transaction Ref° :<b>".$ref."</b>";
 $His=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$userID','$msg','transactionAnnule','$IDtrans',NOW())");
 mysql_close();
 ?>

@@ -14,7 +14,7 @@ if(!file_exists($_FILES['expF']['tmp_name'])){
         header('Location: ../pages/unbilled_expense.php?status=fail');
     }else{
         //historique
-        $msg= "  a ajouté un nouveau expense ";
+        $msg= " has added a new expense";
         $HIS=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','$msg','unbilled_expense','$desc',NOW())");
         //
         header('Location: ../pages/unbilled_expense.php?status=sent');
@@ -49,7 +49,7 @@ if(!file_exists($_FILES['expF']['tmp_name'])){
             header('Location: ../pages/unbilled_expense.php?status=sent');
         }
     }else{
-        echo("Contactez le responsable Systéme SVP !!");
+        echo("PLZ Contact the System Manager !!");
     }
 }
 ?>

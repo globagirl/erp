@@ -44,7 +44,7 @@ if (!mysql_query($sql)) {
         }
         $sql2=mysql_query("UPDATE commande_items SET POitem='$v1',produit='$v2',qty='$v4',prixU='$v6',prixT='$v5'  WHERE PO='$poI'");
         if($statut=='planned'){
-            $msg= " ".$user ."  a modifié le PO  ".$v1." veillez verifier vos PLANS SVP !! ";
+            $msg= " ".$user ."  has modified the PO  ".$v1." PLZ check your PLANS !! ";
             $sql3=mysql_query("UPDATE ordre_fabrication1 SET produit='$v2',qte='$v4' WHERE PO='$v1'");
             $sql4=mysql_query("INSERT INTO notification(emetteur, destinataire, message, dateN,chemin) VALUES ('$user','LOG','$msg',NOW(),'update_ordre_fabrication.php')");
         }else if($statut=='unbilled'){
@@ -60,7 +60,7 @@ if (!mysql_query($sql)) {
     }
     header('Location: ../pages/update_commande.php?status=sent');
     //historique
-    $msg2="a modifié la commande N° <b>".$po."</b>";
+    $msg2=" has changed the Order N° <b>".$po."</b>";
     $His=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','$msg2','commande','$po',NOW())");
 }
 mysql_close();

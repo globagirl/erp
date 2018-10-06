@@ -8,7 +8,7 @@ if(mysql_num_rows($req)>0){
     echo '
         <ul class="nav nav-tabs">
             <li class="active"><a href="#GE" data-toggle="tab">General </a></li>
-            <li><a href="#mag" data-toggle="tab" onClick="afficheMAG();">Used materiel</a></li>
+            <li><a href="#mag" data-toggle="tab" onClick="afficheMAG();">Used material</a></li>
             <li><a href="#man" data-toggle="tab" >Manufacturing</a></li>
         </ul>
         <div class="tab-content" id="general">							
@@ -28,7 +28,7 @@ if(mysql_num_rows($req)>0){
         $i++;
         echo '     <div class="col-lg-12">
 	                    <div class="col-lg-6">
-                         Purshase order N° :
+                         Purchase order N° :
                         </div>
 						<div class="col-lg-6">
                          '.$data1['POitem'].'
@@ -216,10 +216,10 @@ if(mysql_num_rows($req)>0){
                 <b>Date Sortie : '.$data6X['dateS'].'</b>
                 </div>
                 <div class="col-lg-4">
-                <b>ID operateur : '.$data6X['IDoperateur'].'</b>
+                <b>ID Operator : '.$data6X['IDoperateur'].'</b>
                 </div>
                 <div class="col-lg-4">
-                <b>Ordre Fabriquation N° : '.$data6X['OF'].'</b>
+                <b>Manufacturing Order N° : '.$data6X['OF'].'</b>
                 </div>
                 <div class="col-lg-12">
                 <hr>

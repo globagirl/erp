@@ -11,7 +11,7 @@ require_once('../PHPExcel/Classes/PHPExcel.php');
 $objReader = PHPExcel_IOFactory::createReader('Excel2007');
 //Pause
 $cat=$_POST['cat'];
-$note="Vérifier votre extension de fichier SVP !!";
+$note="Check your file extension PLZ !!";
 //File
 $fichier = basename($_FILES['fileP']['name']);
 $extension = strrchr($_FILES['fileP']['name'], '.');
@@ -36,6 +36,6 @@ if($note == ""){
     header('Location: ../pages/update_poids_produit.php?status=sent');
     //echo "OK";
 }else{
-    echo('<p>'.$note.'</p><br><a href="../pages/update_poids_produit.php">retour >></a>');
+    echo('<p>'.$note.'</p><br><a href="../pages/update_poids_produit.php">>>Return</a>');
 }
 ?>

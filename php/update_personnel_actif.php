@@ -7,6 +7,6 @@ if( !mysql_query($sql) ){
     die(mysql_error());
 }else{
     $sql2=mysql_query("Insert into personnel_datee(matricule , dateH,statut) values ('$matNV',NOW(),'E')");
-    echo "Nooon";
+    echo "NO !";
 }
 ?>

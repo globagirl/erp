@@ -4,11 +4,11 @@ include('../connexion/connexionDB.php');
 $sql = mysql_query("SELECT * FROM demande_relance where IDrelance='$demande'");
 $data=mysql_fetch_array($sql);
 
-echo("<tr><th>Demande ID : </th><td>".$data['IDrelance']."</td></tr>
+echo("<tr><th>Request ID : </th><td>".$data['IDrelance']."</td></tr>
 		<tr><th>PO N°: </th><td>".$data['PO']."</td></tr>
 		<tr><th>Article: </th><td>".$data['produit']."</td></tr>
 		<tr><th>Cause: </th><td>".$data['cause']."</td></tr>
-		<tr><th>Détail: </th><td>".$data['detail']."</td></tr>
+		<tr><th>Detail: </th><td>".$data['detail']."</td></tr>
 		<tr><th>QTY: </th><td>".$data['qty']." PC</td></tr>
 		");
 $sql2 = mysql_query("SELECT * FROM demande_relance_items where IDrelance='$demande'");

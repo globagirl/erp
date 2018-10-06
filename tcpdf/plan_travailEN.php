@@ -143,9 +143,9 @@ $rowX = @mysql_fetch_array($sql1);
 $sql1 = mysql_query ("SELECT * FROM produit1 WHERE code_produit='$produit'");
 $row1 = @mysql_fetch_array($sql1);
 
-$pdf->Cell(50,8,'Plan number: '.$row['numPlan'],1,false,'C','R');
+$pdf->Cell(50,8,'WO Number: '.$row['numPlan'],1,false,'C','R');
 $pdf->Cell(43,8,'PO : '.$row0['PO'],1,false,'C','R');
-$pdf->Cell(33,8,'FO : '.$row['OF'],1,false,'C','R');
+$pdf->Cell(33,8,'OF : '.$row['OF'],1,false,'C','R');
 $pdf->Cell(0,8,'Part Number : '.$row0['produit'],1,false,'C','R');
 
 $pdf->ln();
@@ -161,7 +161,7 @@ $pdf->ln();
 
 $pdf->Cell(60,8,'Starting date: '.$row0['date_lance'],1,0,'C');
 $pdf->Cell(60,8,'Expiration date : '.$row0['date_exped_conf'],1,0,'C');
-$pdf->Cell(0,8,'Quantity ordered : '.$row0['qte'],1,0,'C');
+$pdf->Cell(0,8,'Ordered quantity: '.$row0['qte'],1,0,'C');
 
 
 

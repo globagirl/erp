@@ -11,7 +11,7 @@ if (!mysql_query($sql)) {
     header('Location: ../pages/relance_confirmation2.php?status=fail');
 }else{
 //Notification
-    $msg= " La DIRECTION  a confirmé la demande de relance N° :  ".$demande."";
+    $msg= " The MANAGEMENT has confirmed the request of replacement N ° :  ".$demande."";
     $sql4=mysql_query("INSERT INTO notification(emetteur, destinataire, message, dateN,chemin) VALUES ('$user','MAG','$msg',NOW(),'relance_sortie.php')");
     //Historique
     $His=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','add','confirmation relance','$demande',NOW())");

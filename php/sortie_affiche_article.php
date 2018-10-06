@@ -20,9 +20,9 @@ if(mysql_num_rows($sq)>0){
     if(@mysql_num_rows($sqlV)>0){
         $etat=mysql_result($sqlV,0);
         if($etat=="F"){
-            echo("<tr><td colspan=5 style=\"background-color:#FA5858 ; text-align:center\"><b>Il est strictement interdit d'utiliser un cable avec un logo TE </b></td></tr>");
+            echo("<tr><td colspan=5 style=\"background-color:#FA5858 ; text-align:center\"><b>It is strictly forbidden to use a cable with a TE logo</b></td></tr>");
         }else{
-            echo("<tr><td colspan=5 style=\"background-color:#A9F5BC ; text-align:center\"><b>Vous pouvez encore utiliser un cable avec un logo TE jusqu'a la fin du mois janvier</b></td></tr>");
+            echo("<tr><td colspan=5 style=\"background-color:#A9F5BC ; text-align:center\"><b>You can still use a cable with a TE logo until the end of January</b></td></tr>");
         }
     }
 //Fin verification

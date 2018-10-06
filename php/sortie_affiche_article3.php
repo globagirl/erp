@@ -21,7 +21,7 @@ if(mysql_num_rows($sq)>0){
     $i=0;
 ///
     if($statut == "in progres"){
-        echo(" <div class=\"alert alert-danger\">Vous avez  déja effectué une sortie pour cette commande </div>");
+        echo(" <div class=\"alert alert-danger\">You have already made an exit for this order</div>");
     }
     echo"<div class=\"well\"> 
 		<div class=\"form-group form-inline\"> 
@@ -33,7 +33,7 @@ if(mysql_num_rows($sq)>0){
 		<input type=\"text\" class=\"form-control\" value=\"".$OF."\" id=\"OF\" name= \"OF\" /READONLY>
 		</div>
 		<div class=\"form-group form-inline\"> 
-		<label>Produit: </label>
+		<label>Product: </label>
 		<input type=\"text\" class=\"form-control\" value=\"".$produit."\" id=\"PRD\" name= \"PRD\" /READONLY>
 		</div>";
 //Vérification des produits non TE 
@@ -41,9 +41,9 @@ if(mysql_num_rows($sq)>0){
     if(@mysql_num_rows($sqlV)>0){
         $etat=mysql_result($sqlV,0);
         if($etat=="F"){
-            echo(" <div class=\"alert alert-danger\">Il est strictement interdit d'utiliser un cable avec un logo TE </div>");
+            echo(" <div class=\"alert alert-danger\">It is strictly forbidden to use a cable with a TE logo</div>");
         }else{
-            echo("<div class=\"alert alert-warning\">Vous pouvez encore utiliser un cable avec un logo TE jusqu'a la fin du mois janvier</div");
+            echo("<div class=\"alert alert-warning\">You can still use a cable with a TE logo until the end of January</div>");
         }
     }
 //Fin verification
@@ -92,10 +92,10 @@ if(mysql_num_rows($sq)>0){
     echo "<div id=\"paq1\" class=\"col-md-8 well\">
 		<div class=\"form-group form-inline\">     
 		<select id=\"A1\" name=\"A1\"  onChange=affichelisteP('A1','P1');  class=\"form-control\"  >
-		<option value=\"1\">---Selectionnez</option>
+		<option value=\"1\">---Select---</option>
 		</select>
 		<select id=\"P1\" name=\"P1\"  onChange=stockP('P1','S1','1'); class=\"form-control\"  >
-		<option value=\"1\">---Selectionnez</option>
+		<option value=\"1\">---Select---</option>
 		</select>
 		<input type=\"text\" id=\"S1\" name=\"S1\" class=\"form-control\" size=\"8\" READONLY> 
 		<input type=\"text\"  id=\"Q1\" name=\"Q1\"  class=\"form-control\" size=\"8\" placeholder=\"QTY\">
@@ -105,7 +105,7 @@ if(mysql_num_rows($sq)>0){
 		<input type=\"text\" id=\"nbr\" name=\"nbr\" size=\"4\" value=\"1\" HIDDEN>
 		<input type=\"button\"  value=\"+\" onclick=\"add()\" class=\"btn btn-primary\"/>
 		<input type=\"button\"  value=\"-\" onclick=\"deleteZ()\" class=\"btn btn-primary\"/>
-		<input type=\"button\"  value=\"Envoyer >> \" onclick=\"verifier();\" class=\"btn btn-danger pull-right\"/>
+		<input type=\"button\"  value=\"Submit >> \" onclick=\"verifier();\" class=\"btn btn-danger pull-right\"/>
 		</div>";
 }else{
     echo "0";

@@ -17,7 +17,7 @@ if($typeT=='RT'){
 }else{
     $sql5=mysql_query("UPDATE compte_banque SET soldeR=soldeR+'$montant' WHERE REFcompte='$compte'");
 }
-$msg="a validé  la transaction N° <b>".$IDtrans."</b> , son nouveau ID est devenue ".$nbr;
+$msg=" has validate the transaction N ° <b>".$IDtrans."</b> , it's new ID has become".$nbr;
 $His=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$userID','$msg','transactionPass','$nbr',NOW())");
 mysql_close();
 ?>

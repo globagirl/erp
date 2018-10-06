@@ -46,7 +46,7 @@ if (!mysql_query($sql1)) {
         }else{
             $sql2=mysql_query("INSERT INTO sortie_items(IDbande, IDpaquet, qte, typeS,rebut) VALUES ('$ID','$vA','$vQ','$typeS','Y')");$up3= mysql_query("UPDATE article1 SET stock_rebut= stock_rebut-'$qte' where code_article='$IDpaq'");
         }
-        $msg=" a saisie la sortie de <b> ".$vQ." </b> du paquet N°  <b>".$vP."</b> ID sortie ".$ID;
+        $msg=" has signed the output of <b> ".$vQ." </b> from the package N°  <b>".$vP."</b> ID output ".$ID;
         $HIS=mysql_query("INSERT INTO historique(user_id,action,tab,ligne,date_heure)VALUES('$IDoperateur','$msg','bande_sortie','$vP',NOW())");
     }
 }

@@ -22,7 +22,7 @@ if( !isset($_SESSION["role"]) ){
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../bootstrap/js/bootbox.min.js"></script>
     <title>
-        Ajout produit
+        Add Product
     </title>
     <script>
         //Liste catégorie
@@ -75,7 +75,7 @@ if( !isset($_SESSION["role"]) ){
             <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Produit  </h1>
+                        <h1 class="page-header">Product  </h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -83,34 +83,34 @@ if( !isset($_SESSION["role"]) ){
                     <div class="col-lg-6" >
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                Ajout produit
+                                Add Product
                             </div>
                             <div class="panel-body" >
                                 <form role="form" method="post" name="form1" action="../php/ajout_produit_auto.php" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label>Client </label>
+                                                <label>Customer </label>
                                                 <select type="text" name="client" id="client" class="form-control" OnFocus="listeClient();">
-                                                    <option value="s">Sélectionnez..</option>
+                                                    <option value="s">Select...</option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
-                                                <label>Catégorie </label>
+                                                <label>Category </label>
                                                 <select type="text" name="cat" id="cat" class="form-control" OnFocus="catListe();">
-                                                    <option value="s">Sélectionnez..</option>
+                                                    <option value="s">Select...</option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
                                                 <label>Note </label>
-                                                <textarea class="form-control" id="note" name="note" placeholder="Note en cas de mise a jour du prix produit"></textarea>
+                                                <textarea class="form-control" id="note" name="note" placeholder="Note in case of update of the product price"></textarea>
                                             </div>
                                             <div class="form-group">
-                                                <label>Fichier excel </label>
+                                                <label>Excel File</label>
                                                 <input type= "file" name="fileP" id="fileP" class="form-control"/>
                                             </div>
                                             <div class="form-group">
-                                                <input type="submit" class="btn btn-primary" value="Ajouter >> ">
+                                                <input type="submit" class="btn btn-primary" value="Add >> ">
                                             </div>
                                         </div>
                                     </div>
@@ -121,22 +121,22 @@ if( !isset($_SESSION["role"]) ){
                     <div class="col-lg-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                Ajout nomenclature produit
+                                Add Product Nomenclature
                             </div>
                             <div class="panel-body" >
                                 <form role="form" method="post" name="form2" action="../php/ajout_nomenclature_auto.php" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label>Total nbr des composants (+ cable) </label>
+                                                <label>Total components nbr (+ cable) </label>
                                                 <input type= "text" name="nbrC" id="nbrC" class="form-control"/>
                                             </div>
                                             <div class="form-group">
-                                                <label>Fichier excel </label>
+                                                <label>Excel File</label>
                                                 <input type= "file" name="fileP1" id="fileP1" class="form-control"/>
                                             </div>
                                             <div class="form-group">
-                                                <input type="submit" class="btn btn-primary" value="Ajouter >> ">
+                                                <input type="submit" class="btn btn-primary" value="Add >> ">
                                             </div>
                                         </div>
                                     </div>

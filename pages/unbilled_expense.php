@@ -50,7 +50,7 @@ function submitE(){
 function checkA(){
  var amount= document.getElementById("amount").value;
  amount=parseFloat(amount);
- if(amount>100){
+ if(amount>200){
  alert("You amount exceeds the threshold");
   document.getElementById("amount").value="";
  }
